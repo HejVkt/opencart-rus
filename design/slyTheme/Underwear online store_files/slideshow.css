@@ -1,0 +1,210 @@
+/*
+ * jQuery Nivo Slider v2.5.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+/* The Nivo Slider styles */
+.nivoSlider {
+	position: relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display: none;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	overflow:hidden;
+	padding-left:0px;
+	left:0px;
+	bottom:0px;
+	color:#cec4aa;
+	z-index:8;
+	width:100%;
+	line-height:21px;
+	font-size:15px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+.nivo-caption span { display:block;}
+.nivo-caption span.line-2 {
+	padding:0 150px 0 28px;	
+	font-size:15px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+.lefttext {
+	font-size:20px;
+	color:#fff;
+	line-height:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:normal;
+	margin:0 150px 5px 28px;
+}
+.nivo-caption p{ position:relative;}
+.nivo-caption p h1{ color:#fff; font-size:23px; text-transform:uppercase;font-weight:600; padding-top:17px;  padding-bottom:0; position:absolute; left:0px; top:0px; margin-bottom:0;font-family: 'Open Sans', sans-serif;opacity:1;
+filter: alpha(opacity=100);}
+.nivo-caption p p{ color:#82756b; font-size:11px; line-height:15px; height:20px; text-transform: uppercase; font-weight:600;font-family: 'Open Sans', sans-serif;position:absolute; left:0px; top:50px;opacity:1;
+filter: alpha(opacity=100);}
+.nivo-caption p  a{
+	background: url('../image/banner-button.png') left top no-repeat;
+	padding:0;
+	font-size:14px;
+	color:#fefcf6;
+	text-decoration:none;
+}
+.nivo-caption p  a:hover{ text-decoration:underline}
+.nivo-caption p {
+	padding:35px 0 36px 0;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+	display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	bottom:15px;
+	z-index:9;
+	cursor:pointer;
+}
+
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+/* slider theme */
+.slideshow a {
+	border: 0;
+	display: block;
+}
+.nivo-controlNav {
+	position: absolute;
+	right:13px;
+	top:13px;
+	z-index:9;
+}
+.nivo-controlNav a:hover{color:#d41c0a;}
+.nivo-controlNav a {
+	vertical-align: top;
+	display: block;
+	text-indent:-9999px;
+ 	text-decoration:none;
+	font-size:0px; 
+	cursor:pointer;
+	float:left;
+	margin-left:4px;
+	background: url('../image/paggs.png') right top no-repeat; 
+	width:16px; 
+	height:16px;
+}
+.nivo-controlNav a:hover, .nivo-controlNav a.nivo-control.active {
+	background-position:left 0;	
+}
+.nivo-controlNav a.nivo-control.active { cursor:default;}
+
+.nivo-directionNav a {
+	display:block;
+	width:10px;
+	height:20px;
+	text-indent:-9999px;
+	border:0;
+	z-index:10
+}
+.nivo-directionNav a:hover { background-position:0 bottom;}
+a.nivo-nextNav {
+	background-position:-30px 0;
+	left:205px;
+	background:url(../image/next.png) right 0 no-repeat;
+}
+a.nivo-prevNav {
+	left:19px;
+	background:url(../image/prev.png) right 0 no-repeat;
+}
+.nivo-caption {
+	text-shadow:none;
+	font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a {
+	color:#efe9d1;
+	text-decoration:underline;
+}
+
+
+#loopedCarousel{ position:relative; padding-left:30px;}
+#loopedCarousel .container {height:242px; width:480px!important; overflow:hidden; position:relative; }
+.slides {position:absolute; top:10px; left:0; width:500px;}
+.slides .name { padding-bottom:7px;}
+.slides .name a{ color:#2fa1bc; text-decoration:underline;}
+.slides .name a:hover{ text-decoration:underline; color:#f83b01;}
+.slides .price{ color:#f65423; font-weight:bold;}
+.slides .price .price-old{ font-weight:normal; font-size:11px; text-decoration:line-through; display:block; }
+.slides > div {width:140px;display:block; padding-right:21px; text-align:center; }
+#loopedCarousel .pagination{ display:none;}
+#loopedCarousel .previous{background: url('../image/prev.png') left top no-repeat; width:19px; height:28px; position:absolute; left:-2px; top:102px; font-size:0; line-height:0; text-indent:-9999px;  }
+#loopedCarousel .previous:hover{ background-position:0 -28px;}
+#loopedCarousel .next{background: url('../image/next.png') left top no-repeat; width:19px; height:28px; position:absolute; right:0px; top:102px; font-size:0; line-height:0; text-indent:-9999px;  }
+#loopedCarousel .next:hover{ background-position:0 -28px;}
+.hover-spesial{ position:absolute; left:30px; top:100px;
+background: url('../image/hover-special.png') left top no-repeat; width:103px; height:29px;
+
+-moz-transition: all 0.8s ease 0s;
+ -webkit-transition: all 0.8s ease 0s;
+ -o-transition: all 0.8s ease 0s;
+
+-webkit-transform: scale(0) rotate(0deg);
+   -moz-transform:scale(0) rotate(0deg);
+   -o-transform: scale(0) rotate(0deg);
+   -ms-transform:scale(0) rotate(0deg);
+   transform:scale(0) rotate(0deg);
+}
+ .product-col:hover .hover-spesial{ display:block;
+
+-webkit-transform: scale(1) rotate(720deg);
+   -moz-transform: scale(1) rotate(720deg);
+   -o-transform: scale(1) rotate(720deg);
+   -ms-transform: scale(1) rotate(720deg);
+   transform: scale(1) rotate(720deg);
+}
+
+.nivo-directionNav {
+	display:block !important;
+}	

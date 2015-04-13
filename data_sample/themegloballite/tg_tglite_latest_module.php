@@ -1,0 +1,1 @@
+a:2:{s:11:"f94dzl7kdil";a:3:{s:5:"limit";s:2:"10";s:5:"width";s:3:"200";s:6:"height";s:3:"200";}s:11:"z1g88hc850p";a:3:{s:5:"limit";s:2:"10";s:5:"width";s:2:"60";s:6:"height";s:2:"60";}}

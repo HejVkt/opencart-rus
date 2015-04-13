@@ -1,0 +1,30 @@
+<modification>
+	
+	 <id>ThemeGlobal Carousel</id>
+	<version>1.0</version>
+	<vqmver>2.5.1</vqmver>
+	<author>ThemeGlobal</author>
+
+	<file name="catalog/controller/module/carousel.php">
+		<operation>
+			<search position="replace"><![CDATA[
+				$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+			]]></search>
+			
+			<add><![CDATA[
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[
+				$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+			]]></search>
+
+			<add><![CDATA[
+			]]></add>
+		</operation>
+
+	</file>
+
+	
+	
+</modification>

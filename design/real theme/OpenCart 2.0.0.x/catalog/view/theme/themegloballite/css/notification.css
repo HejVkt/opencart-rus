@@ -1,0 +1,32 @@
+/************************************ThemeGlobal Notificatioin for add to Cart, Wishlist, Compare*********************************************************/	
+.ui-notify-click { cursor:pointer }
+.ui-notify-close { color:black; }
+.ui-notify-cross { margin-top:8px; margin-right:20px;float:right; cursor:pointer;   display: inline-block; font-size: 12px; text-transform: uppercase; font-weight: 500;}
+.ui-notify {position:fixed;z-index:1000;top:20px;right:20px; }
+.ui-notify .ui-notify-message{ 
+position:relative; 	width:275px; 
+	background:#fff;
+	margin-bottom:20px;}
+
+	h2.icon_success{
+    border: 1px solid #f0f0f0;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+	margin: 0px;
+	}
+	.ui-notify .style_text{
+	overflow:hidden;
+	padding:20px;
+	border: 1px solid #f0f0f0;
+	border-top: none;}
+	.ui-notify .style_text img{
+	float:left;margin-right:20px;}
+	.ui-notify .style_text h3{
+	font-size:14px;color:#747373; font-weight: 400; 
+	text-align:left;text-transform: none;
+	line-height:20px; margin-top:0}
+	.ui-notify .style_text h3 a{color:#000000;font-size: 14px!important; }

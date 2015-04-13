@@ -1,0 +1,1 @@
+a:1:{s:11:"wargaznt49c";a:5:{s:9:"banner_id";s:1:"8";s:5:"limit";s:1:"6";s:6:"scroll";s:1:"1";s:5:"width";s:3:"100";s:6:"height";s:3:"100";}}

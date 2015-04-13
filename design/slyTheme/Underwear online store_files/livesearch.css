@@ -1,0 +1,46 @@
+#livesearch_search_results {
+        margin:0px;
+        padding:5px;
+        position: absolute;
+        top: 32px;
+        left: 0px;
+        background-color: #2e2e2e;
+        list-style-type: none;
+        z-index: 12;
+       width: 300px;
+}
+#livesearch_search_results li {
+        padding: 0px;
+		overflow:hidden;
+        -webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+#livesearch_search_results a,
+#livesearch_search_results a:visited,
+#livesearch_search_results a:hover {
+        color: #fff;
+        text-decoration: none;
+}
+#livesearch_search_results a {
+	display:block; padding:5px;	float:left;
+}
+#livesearch_search_results a:hover {
+        color: #FFF;
+}
+#livesearch_search_results li:hover {
+        background-color: #ec1919;
+}
+#livesearch_search_results .highlighted {
+        background-color: #ec1919;
+}
+#livesearch_search_results li img {
+	overflow:hidden;
+	float:left;
+	margin-right:10px;
+}
+#livesearch_search_results li img.loading {
+	background:#fff;	
+}

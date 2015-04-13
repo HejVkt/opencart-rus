@@ -1,0 +1,11 @@
+#language img {
+	display: none;
+}
+
+.main-fixed {
+    border: 1px solid #F0F0F0;
+}
+
+.dropdown_l ul {
+     border: 1px solid #F0F0F0;
+}

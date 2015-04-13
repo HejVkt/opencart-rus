@@ -1,0 +1,165 @@
+<modification>
+	
+	 <id>ThemeGlobal Notification</id>
+	<version>2.0</version>
+	<vqmver>2.5.1</vqmver>
+	<author>ThemeGlobal</author>
+
+	<file name="catalog/controller/checkout/cart.php">
+		<operation>
+			<search position="before"><![CDATA[
+				$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('checkout/cart'));
+
+			]]></search>
+			
+			<add><![CDATA[
+				$this->load->model('tool/image'); 
+				$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_wishlist_width'), $this->config->get('config_image_wishlist_height'));
+				$json['product_name'] = $this->language->get('text_product_name');
+				$json['product_pic'] = sprintf($this->language->get('text_product_pic'), $image);
+
+			]]></add>
+		</operation>
+
+	</file>
+
+	
+	<file name="catalog/language/english/checkout/cart.php">
+		<operation>
+			<search position="before"><![CDATA[
+			$_['column_image']
+			]]></search>
+			
+			<add><![CDATA[
+				$_['text_product_name']             = 'Product added to your cart!';
+				$_['text_product_pic']             = '<img src="%s" alt="" />';
+
+			]]></add>
+		</operation>
+	</file>
+	
+	<file name="catalog/language/russian/checkout/cart.php">
+		<operation>
+			<search position="before"><![CDATA[
+			$_['column_image']
+			]]></search>
+			
+			<add><![CDATA[
+				$_['text_product_name']             = 'Товар добавлен в корзину!';
+				$_['text_product_pic']             = '<img src="%s" alt="" />';
+
+			]]></add>
+		</operation>
+	</file>
+
+	<file name="catalog/controller/product/compare.php">
+	<operation>
+			<search position="before"><![CDATA[
+			$json['success'] = sprintf($this->language->get('text_success'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('product/compare'));				
+			]]></search>
+			
+			<add><![CDATA[
+				$this->load->model('tool/image'); 
+				$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_wishlist_width'), $this->config->get('config_image_wishlist_height'));
+				$json['product_name'] = $this->language->get('text_product_name');
+				$json['product_pic'] = sprintf($this->language->get('text_product_pic'), $image);
+			]]></add>
+	</operation>
+
+	</file> 
+	
+	<file name="catalog/language/english/product/compare.php">
+	<operation>
+		<search position="before"><![CDATA[
+		$_['text_product']
+		]]></search>
+		
+		<add><![CDATA[
+			$_['text_product_name']             = 'Product added to compare!';
+			$_['text_product_pic']             = '<img src="%s" alt="" />';
+		]]></add>
+	</operation>
+	</file>
+	
+	<file name="catalog/language/russian/product/compare.php">
+	<operation>
+		<search position="before"><![CDATA[
+		$_['text_product']
+		]]></search>
+		
+		<add><![CDATA[
+			$_['text_product_name']             = 'Товар был добавлен в список сравнения товаров!';
+			$_['text_product_pic']             = '<img src="%s" alt="" />';
+		]]></add>
+	</operation>
+	</file>
+
+	<file name="catalog/language/english/account/wishlist.php">
+	<operation>
+		<search position="after"><![CDATA[
+			$_['text_account']
+			]]></search>
+		
+		<add><![CDATA[
+			$_['custom_text_failure']             = 'Product not added to wishlist!';
+			$_['exists_text_failure']             = 'Product is already in  wishlist!';
+			$_['text_product_name']             = 'Product added to wish list!';
+			$_['text_product_pic']             = '<img src="%s" alt="" />';
+		]]></add>
+	</operation>
+	</file>
+	
+	<file name="catalog/language/russian/account/wishlist.php">
+	<operation>
+		<search position="after"><![CDATA[
+			$_['text_account']
+			]]></search>
+		
+		<add><![CDATA[
+			$_['custom_text_failure']             = 'Товар не был добавлен в заметки!';
+			$_['exists_text_failure']             = 'Продукт уже в заметки!';
+			$_['text_product_name']             = 'Товар был добавлен в заметки!';
+			$_['text_product_pic']             = '<img src="%s" alt="" />';
+		]]></add>
+	</operation>
+	</file>
+
+	
+	<file name="catalog/controller/account/wishlist.php">
+	<operation>
+		<search position="after"><![CDATA[
+		$product_info = $this->model_catalog_product->getProduct($product_id);
+		]]></search>
+		
+		<add><![CDATA[
+			$this->load->model('tool/image'); 
+			$image = $this->model_tool_image->resize($product_info['image'], $this->config->get('config_image_wishlist_width'), $this->config->get('config_image_wishlist_height'));
+			$json['product_name'] = $this->language->get('text_product_name');
+			$json['product_pic'] = sprintf($this->language->get('text_product_pic'), $image);
+		]]></add>
+	</operation>
+
+	<operation>
+		<search position="replace"><![CDATA[
+		$json['info'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));				
+		]]></search>
+		
+		<add><![CDATA[
+   		$json['failure'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', '', 'SSL'), $this->url->link('account/register', '', 'SSL'), $this->url->link('product/product', 'product_id=' . $this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));				
+		$json['product_name'] = $this->language->get('custom_text_failure');
+		]]></add>
+	</operation>
+	
+	<operation>
+		<search position="replace"><![CDATA[
+		$json['info'] = sprintf($this->language->get('text_exists'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));				
+		]]></search>
+		
+		<add><![CDATA[
+   		$json['info'] = sprintf($this->language->get('text_exists'), $this->url->link('product/product', 'product_id=' . (int)$this->request->post['product_id']), $product_info['name'], $this->url->link('account/wishlist'));$json['product_name'] = $this->language->get('exists_text_failure');
+		]]></add>
+	</operation>
+	</file>
+
+
+</modification>
