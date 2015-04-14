@@ -1,4 +1,5 @@
 config.php
 admin/config.php
 system/cache/
+system/logs/
 image/cache/
