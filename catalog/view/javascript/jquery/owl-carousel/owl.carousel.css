@@ -112,7 +112,7 @@
 }
 .owl-pagination {
 	text-align: center;
-	top: 20px;
+	top: -30px;
 	position: relative;
 }
 .owl-controls .owl-page {

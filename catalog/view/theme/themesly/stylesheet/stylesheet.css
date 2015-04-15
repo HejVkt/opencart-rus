@@ -949,6 +949,7 @@ h2 {
     margin-top:0px;
     margin-bottom:0px;
 }
+
 #column-left + #column-right + #content, #column-left + #content {
     margin-left:261px;
 }
@@ -4823,4 +4824,9 @@ li.related-info:first-child {margin-left:0px}
 }
 #payment, .payment {
     padding:10px;
+}
+
+
+#banner-home #column-right{
+   width: 354px;
 }
