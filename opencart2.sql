@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-04-14 01:44:41
+Date: 2015-04-16 01:37:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -760,7 +760,7 @@ CREATE TABLE `oc_currency` (
 -- ----------------------------
 -- Records of oc_currency
 -- ----------------------------
-INSERT INTO `oc_currency` VALUES ('1', 'Рубль', 'RUB', '', 'р.', '0', '1.00000000', '1', '2015-04-11 03:01:42');
+INSERT INTO `oc_currency` VALUES ('1', 'Рубль', 'RUB', '', 'р.', '0', '1.00000000', '1', '2015-04-16 01:31:24');
 
 -- ----------------------------
 -- Table structure for `oc_customer`
@@ -1316,7 +1316,7 @@ CREATE TABLE `oc_layout` (
 -- ----------------------------
 -- Records of oc_layout
 -- ----------------------------
-INSERT INTO `oc_layout` VALUES ('1', 'Home');
+INSERT INTO `oc_layout` VALUES ('1', 'Главная страница');
 INSERT INTO `oc_layout` VALUES ('2', 'Product');
 INSERT INTO `oc_layout` VALUES ('3', 'Category');
 INSERT INTO `oc_layout` VALUES ('4', 'Default');
@@ -1341,7 +1341,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=86 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_layout_module
@@ -1351,11 +1351,11 @@ INSERT INTO `oc_layout_module` VALUES ('3', '4', '0', 'content_top', '1');
 INSERT INTO `oc_layout_module` VALUES ('20', '5', '0', 'column_left', '2');
 INSERT INTO `oc_layout_module` VALUES ('69', '10', 'affiliate', 'column_right', '1');
 INSERT INTO `oc_layout_module` VALUES ('68', '6', 'account', 'column_right', '1');
-INSERT INTO `oc_layout_module` VALUES ('67', '1', 'carousel.29', 'content_top', '3');
-INSERT INTO `oc_layout_module` VALUES ('66', '1', 'slideshow.27', 'content_top', '1');
-INSERT INTO `oc_layout_module` VALUES ('65', '1', 'featured.28', 'content_top', '2');
+INSERT INTO `oc_layout_module` VALUES ('84', '1', 'slideshow.27', 'content_top', '1');
 INSERT INTO `oc_layout_module` VALUES ('72', '3', 'category', 'column_left', '1');
 INSERT INTO `oc_layout_module` VALUES ('73', '3', 'banner.30', 'column_left', '2');
+INSERT INTO `oc_layout_module` VALUES ('85', '1', 'banner.33', 'column_right', '2');
+INSERT INTO `oc_layout_module` VALUES ('83', '1', 'featured.28', 'content_bottom', '3');
 
 -- ----------------------------
 -- Table structure for `oc_layout_route`
@@ -1367,7 +1367,7 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_layout_route
@@ -1375,7 +1375,7 @@ CREATE TABLE `oc_layout_route` (
 INSERT INTO `oc_layout_route` VALUES ('38', '6', '0', 'account/%');
 INSERT INTO `oc_layout_route` VALUES ('17', '10', '0', 'affiliate/%');
 INSERT INTO `oc_layout_route` VALUES ('44', '3', '0', 'product/category');
-INSERT INTO `oc_layout_route` VALUES ('42', '1', '0', 'common/home');
+INSERT INTO `oc_layout_route` VALUES ('57', '1', '0', 'common/home');
 INSERT INTO `oc_layout_route` VALUES ('20', '2', '0', 'product/product');
 INSERT INTO `oc_layout_route` VALUES ('24', '11', '0', 'information/information');
 INSERT INTO `oc_layout_route` VALUES ('23', '7', '0', 'checkout/%');
@@ -1534,7 +1534,7 @@ CREATE TABLE `oc_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_module
@@ -1542,7 +1542,10 @@ CREATE TABLE `oc_module` (
 INSERT INTO `oc_module` VALUES ('30', 'Category', 'banner', 'a:5:{s:4:\"name\";s:17:\"Banner - Category\";s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"300\";s:6:\"height\";s:3:\"300\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('29', 'Home Page', 'carousel', 'a:5:{s:4:\"name\";s:20:\"Carousel - Home Page\";s:9:\"banner_id\";s:1:\"8\";s:5:\"width\";s:3:\"130\";s:6:\"height\";s:3:\"100\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('28', 'Home Page', 'featured', 'a:6:{s:4:\"name\";s:20:\"Featured - Home Page\";s:7:\"product\";a:4:{i:0;s:2:\"43\";i:1;s:2:\"40\";i:2;s:2:\"42\";i:3;s:2:\"30\";}s:5:\"limit\";s:1:\"4\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"200\";s:6:\"status\";s:1:\"1\";}');
-INSERT INTO `oc_module` VALUES ('27', 'Home Page', 'slideshow', 'a:5:{s:4:\"name\";s:21:\"Slideshow - Home Page\";s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:4:\"1140\";s:6:\"height\";s:3:\"380\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('27', 'Slideshow - Home Page', 'slideshow', 'a:5:{s:4:\"name\";s:21:\"Slideshow - Home Page\";s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:3:\"670\";s:6:\"height\";s:3:\"370\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('31', 'Baner', 'banner', 'a:5:{s:4:\"name\";s:5:\"Baner\";s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:3:\"354\";s:6:\"height\";s:3:\"185\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('32', 'Slideshow - Main Page', 'slideshow', 'a:5:{s:4:\"name\";s:21:\"Slideshow - Main Page\";s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:3:\"670\";s:6:\"height\";s:3:\"370\";s:6:\"status\";s:1:\"0\";}');
+INSERT INTO `oc_module` VALUES ('33', 'Банер на главной1', 'banner', 'a:5:{s:4:\"name\";s:31:\"Банер на главной1\";s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"354\";s:6:\"height\";s:3:\"185\";s:6:\"status\";s:1:\"1\";}');
 
 -- ----------------------------
 -- Table structure for `oc_option`
@@ -2044,7 +2047,7 @@ INSERT INTO `oc_product` VALUES ('33', 'Product 6', '', '', '', '', '', '', '', 
 INSERT INTO `oc_product` VALUES ('34', 'Product 7', '', '', '', '', '', '', '', '1000', '6', 'catalog/demo/ipod_shuffle_1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:07:54', '2011-09-30 01:07:17');
 INSERT INTO `oc_product` VALUES ('35', 'Product 8', '', '', '', '', '', '', '', '1000', '5', '', '0', '0', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 18:08:31', '2011-09-30 01:06:17');
 INSERT INTO `oc_product` VALUES ('36', 'Product 9', '', '', '', '', '', '', '', '994', '6', 'catalog/demo/ipod_nano_1.jpg', '8', '0', '100.0000', '100', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:09:19', '2011-09-30 01:07:12');
-INSERT INTO `oc_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '970', '5', 'catalog/demo/iphone_1.jpg', '8', '1', '101.0000', '0', '9', '2009-02-03', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:12', '2011-09-30 01:06:53');
+INSERT INTO `oc_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '970', '5', 'catalog/demo/iphone_1.jpg', '8', '1', '101.0000', '0', '9', '2009-02-03', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '1', '2009-02-03 21:07:12', '2011-09-30 01:06:53');
 INSERT INTO `oc_product` VALUES ('41', 'Product 14', '', '', '', '', '', '', '', '977', '5', 'catalog/demo/imac_1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:26', '2011-09-30 01:06:44');
 INSERT INTO `oc_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '990', '5', 'catalog/demo/apple_cinema_30.jpg', '8', '1', '100.0000', '400', '9', '2009-02-04', '12.50000000', '1', '1.00000000', '2.00000000', '3.00000000', '1', '1', '2', '0', '1', '0', '2009-02-03 21:07:37', '2011-09-30 00:46:19');
 INSERT INTO `oc_product` VALUES ('43', 'Product 16', '', '', '', '', '', '', '', '929', '5', 'catalog/demo/macbook_1.jpg', '8', '0', '500.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:07:49', '2011-09-30 01:05:46');
