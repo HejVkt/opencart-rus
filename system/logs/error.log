@@ -37,3 +37,12 @@
 2015-04-11 2:51:52 - PHP Notice:  Undefined variable: text_search in D:\home\www\opencart-rus.ru\catalog\view\theme\default\template\common\header.tpl on line 71
 2015-04-11 2:51:52 - PHP Notice:  Undefined variable: text_welcome in D:\home\www\opencart-rus.ru\catalog\view\theme\default\template\common\header.tpl on line 80
 2015-04-11 2:51:52 - PHP Notice:  Undefined variable: heading_title in D:\home\www\opencart-rus.ru\catalog\view\theme\default\template\common\home.tpl on line 3
+2015-04-15 2:49:47 - PHP Notice:  Undefined variable: children in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:49:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:49:47 - PHP Notice:  Undefined variable: children in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:49:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:49:47 - PHP Notice:  Undefined variable: children in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:49:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:49:47 - PHP Notice:  Undefined variable: children in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:49:47 - PHP Warning:  Invalid argument supplied for foreach() in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 128
+2015-04-15 2:52:34 - PHP Notice:  Undefined variable: i in D:\home\www\opencart-rus.ru\catalog\view\theme\themesly\template\common\header.tpl on line 117

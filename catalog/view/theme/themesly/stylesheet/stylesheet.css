@@ -897,7 +897,7 @@ h1 {
     font-size: 22px;
     font-weight:normal;
     margin:20px 0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
 }
 h2 {
@@ -906,7 +906,7 @@ h2 {
     margin-top: 0px;
     margin-bottom:10px;
     font-weight:normal;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 /********************************************************************************************************************************************************************************/
 .slideshow {
@@ -984,7 +984,7 @@ h2 {
     color: #535355;
     line-height: 12px;
     font-size:14px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     float:right;
 }
 #currency span {
@@ -1001,7 +1001,7 @@ h2 {
     text-align:center;
     color:#535355;
     font-size:14px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     line-height:26px;
 }
 #currency a:hover span {
@@ -1020,7 +1020,7 @@ h2 {
     float:left;
     color:#FFF;
     font-weight:400;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-size:15px;
     text-transform:uppercase
 }
@@ -1271,7 +1271,7 @@ h2 {
     margin-right:25px;
 }
 #header .links {
-    font-size: 14px;
+    font-size: 16px;
     float:right;
     margin-top:10px;
 }
@@ -1283,9 +1283,11 @@ h2 {
     margin-left:20px;
 }
 #header .links a {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
-    font-size:14px;
+    font-size:15px;
+    font-weight: bold;
+
     display: inline-block;
     padding: 0px 0px 0px 0px;
     color:#535355;
@@ -1334,7 +1336,7 @@ h2 {
     text-align:center;
     font-size:13px;
     text-transform:uppercase;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     color:#fff;
     line-height:32px;
     -webkit-transition: all 0.3s ease-in-out;
@@ -1373,7 +1375,7 @@ h2 {
     line-height:normal;
     text-transform:uppercase;
     font-size:14px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 .name a:hover {
     text-decoration:none;
@@ -1384,7 +1386,7 @@ h2 {
     line-height:normal;
     color:#535355;
     font-weight:normal;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 .price .price-new {
     margin-right:10px;
@@ -1546,7 +1548,7 @@ h2 {
     color: #383737;
     font-size: 12px;
     padding:5px 0px 15px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
 }
 .success, .warning, .attention, .information {
@@ -1631,7 +1633,7 @@ table.list {
     color:#ec1919;
     font-weight:normal;
     font-size:15px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 .return-remove .button:hover {
     color:#fff;
@@ -1735,7 +1737,7 @@ a.button span {
     font-weight:normal;
     font-size:13px;
     line-height:21px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
 }
 .button strong {
@@ -1979,7 +1981,7 @@ a.button span {
     padding-bottom:20px;
     margin-bottom:30px;
     border-bottom:1px solid #e0e0e0;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
 }
 .box .box-content {
     overflow:hidden;
@@ -3100,7 +3102,7 @@ ul {
     background: none repeat scroll 0 0 #ff0000;
     color: #FFFFFF;
     float: left;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-size: 22px;
     font-weight: normal;
     line-height: 22px;
@@ -3387,7 +3389,7 @@ ul {
     border-right:0;
 }
 .compare-info td.td-price {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-weight:normal;
     color:#ff0000
 }
@@ -3950,7 +3952,7 @@ a {
     font-size:17px;
 }
 .cart-info tbody .total {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-weight:normal
 }
 .cart-info tbody .quantity, .cart-info tbody .price, .cart-info tbody .total {
@@ -4440,7 +4442,7 @@ tbody .total {
     font-weight:normal;
     font-size:15px;
     margin:25px 0 20px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
 }
 #footer .column {}
@@ -4742,7 +4744,7 @@ li.related-info:first-child {margin-left:0px}
     border: 1px solid #E4E4E4;
     font-weight: bold;
     padding: 6px 10px;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-weight:normal
 }
 .cart-bottom .buttons {
