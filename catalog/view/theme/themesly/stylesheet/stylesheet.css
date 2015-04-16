@@ -506,7 +506,6 @@ footer h5 {
 }
 /* product list */
 .product-thumb {
-	border: 1px solid #ddd;
 	margin-bottom: 20px;
 	overflow: auto;
 }
@@ -1980,6 +1979,8 @@ a.button span {
     font-size:19px;
     text-transform:uppercase;
     padding-bottom:20px;
+    padding-top:20px;
+
     margin-bottom:30px;
     border-bottom:1px solid #e0e0e0;
     font-family: 'Cuprum', sans-serif;
@@ -4829,4 +4830,9 @@ li.related-info:first-child {margin-left:0px}
 
 #banner-home #column-right{
    width: 354px;
+}
+
+.box-heading h3{
+    margin:0px;
+    padding:0px;
 }
