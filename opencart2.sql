@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-04-16 01:37:32
+Date: 2015-04-17 02:04:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -258,7 +258,7 @@ CREATE TABLE `oc_banner` (
   `name` varchar(64) NOT NULL,
   `status` tinyint(1) NOT NULL,
   PRIMARY KEY (`banner_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_banner
@@ -266,6 +266,9 @@ CREATE TABLE `oc_banner` (
 INSERT INTO `oc_banner` VALUES ('6', 'HP Products', '1');
 INSERT INTO `oc_banner` VALUES ('7', 'Home Page Slideshow', '1');
 INSERT INTO `oc_banner` VALUES ('8', 'Manufacturers', '1');
+INSERT INTO `oc_banner` VALUES ('9', 'Банер sales', '1');
+INSERT INTO `oc_banner` VALUES ('10', 'банер на главной справа', '1');
+INSERT INTO `oc_banner` VALUES ('11', 'банер на главной справа2', '1');
 
 -- ----------------------------
 -- Table structure for `oc_banner_image`
@@ -278,7 +281,7 @@ CREATE TABLE `oc_banner_image` (
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`banner_image_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=112 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_banner_image
@@ -297,6 +300,10 @@ INSERT INTO `oc_banner_image` VALUES ('90', '8', '', 'catalog/demo/manufacturer/
 INSERT INTO `oc_banner_image` VALUES ('80', '7', '', 'catalog/demo/banners/MacBookAir.jpg', '0');
 INSERT INTO `oc_banner_image` VALUES ('97', '8', '', 'catalog/demo/manufacturer/starbucks.png', '0');
 INSERT INTO `oc_banner_image` VALUES ('98', '8', '', 'catalog/demo/manufacturer/nintendo.png', '0');
+INSERT INTO `oc_banner_image` VALUES ('99', '9', '/index.php?route=information/information&amp;information_id=6', 'catalog/banner-4-670x130.jpg', '0');
+INSERT INTO `oc_banner_image` VALUES ('109', '11', '', 'catalog/banner-3-354x130.jpg', '0');
+INSERT INTO `oc_banner_image` VALUES ('111', '10', '', 'catalog/banner-2-354x185.jpg', '2');
+INSERT INTO `oc_banner_image` VALUES ('110', '10', '', 'catalog/banner-1-354x185.jpg', '1');
 
 -- ----------------------------
 -- Table structure for `oc_banner_image_description`
@@ -327,6 +334,10 @@ INSERT INTO `oc_banner_image_description` VALUES ('95', '1', '8', 'RedBull');
 INSERT INTO `oc_banner_image_description` VALUES ('96', '1', '8', 'Sony');
 INSERT INTO `oc_banner_image_description` VALUES ('97', '1', '8', 'Starbucks');
 INSERT INTO `oc_banner_image_description` VALUES ('98', '1', '8', 'Nintendo');
+INSERT INTO `oc_banner_image_description` VALUES ('99', '1', '9', 'Sale70%');
+INSERT INTO `oc_banner_image_description` VALUES ('110', '1', '10', 'Diesel');
+INSERT INTO `oc_banner_image_description` VALUES ('111', '1', '10', 'CK');
+INSERT INTO `oc_banner_image_description` VALUES ('109', '1', '11', 'free shipping');
 
 -- ----------------------------
 -- Table structure for `oc_category`
@@ -760,7 +771,7 @@ CREATE TABLE `oc_currency` (
 -- ----------------------------
 -- Records of oc_currency
 -- ----------------------------
-INSERT INTO `oc_currency` VALUES ('1', 'Рубль', 'RUB', '', 'р.', '0', '1.00000000', '1', '2015-04-16 01:31:24');
+INSERT INTO `oc_currency` VALUES ('1', 'Рубль', 'RUB', '', 'р.', '0', '1.00000000', '1', '2015-04-17 01:33:11');
 
 -- ----------------------------
 -- Table structure for `oc_customer`
@@ -1341,7 +1352,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=86 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_layout_module
@@ -1351,11 +1362,13 @@ INSERT INTO `oc_layout_module` VALUES ('3', '4', '0', 'content_top', '1');
 INSERT INTO `oc_layout_module` VALUES ('20', '5', '0', 'column_left', '2');
 INSERT INTO `oc_layout_module` VALUES ('69', '10', 'affiliate', 'column_right', '1');
 INSERT INTO `oc_layout_module` VALUES ('68', '6', 'account', 'column_right', '1');
-INSERT INTO `oc_layout_module` VALUES ('84', '1', 'slideshow.27', 'content_top', '1');
+INSERT INTO `oc_layout_module` VALUES ('99', '1', 'banner.33', 'column_right', '2');
+INSERT INTO `oc_layout_module` VALUES ('100', '1', 'banner.34', 'content_top', '3');
 INSERT INTO `oc_layout_module` VALUES ('72', '3', 'category', 'column_left', '1');
 INSERT INTO `oc_layout_module` VALUES ('73', '3', 'banner.30', 'column_left', '2');
-INSERT INTO `oc_layout_module` VALUES ('85', '1', 'banner.33', 'column_right', '2');
-INSERT INTO `oc_layout_module` VALUES ('83', '1', 'featured.28', 'content_bottom', '3');
+INSERT INTO `oc_layout_module` VALUES ('101', '1', 'banner.35', 'column_right', '3');
+INSERT INTO `oc_layout_module` VALUES ('98', '1', 'featured.28', 'content_top', '4');
+INSERT INTO `oc_layout_module` VALUES ('97', '1', 'slideshow.27', 'content_top', '1');
 
 -- ----------------------------
 -- Table structure for `oc_layout_route`
@@ -1367,7 +1380,7 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_layout_route
@@ -1375,7 +1388,7 @@ CREATE TABLE `oc_layout_route` (
 INSERT INTO `oc_layout_route` VALUES ('38', '6', '0', 'account/%');
 INSERT INTO `oc_layout_route` VALUES ('17', '10', '0', 'affiliate/%');
 INSERT INTO `oc_layout_route` VALUES ('44', '3', '0', 'product/category');
-INSERT INTO `oc_layout_route` VALUES ('57', '1', '0', 'common/home');
+INSERT INTO `oc_layout_route` VALUES ('61', '1', '0', 'common/home');
 INSERT INTO `oc_layout_route` VALUES ('20', '2', '0', 'product/product');
 INSERT INTO `oc_layout_route` VALUES ('24', '11', '0', 'information/information');
 INSERT INTO `oc_layout_route` VALUES ('23', '7', '0', 'checkout/%');
@@ -1534,18 +1547,20 @@ CREATE TABLE `oc_module` (
   `code` varchar(32) NOT NULL,
   `setting` text NOT NULL,
   PRIMARY KEY (`module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_module
 -- ----------------------------
 INSERT INTO `oc_module` VALUES ('30', 'Category', 'banner', 'a:5:{s:4:\"name\";s:17:\"Banner - Category\";s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"300\";s:6:\"height\";s:3:\"300\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('29', 'Home Page', 'carousel', 'a:5:{s:4:\"name\";s:20:\"Carousel - Home Page\";s:9:\"banner_id\";s:1:\"8\";s:5:\"width\";s:3:\"130\";s:6:\"height\";s:3:\"100\";s:6:\"status\";s:1:\"1\";}');
-INSERT INTO `oc_module` VALUES ('28', 'Home Page', 'featured', 'a:6:{s:4:\"name\";s:20:\"Featured - Home Page\";s:7:\"product\";a:4:{i:0;s:2:\"43\";i:1;s:2:\"40\";i:2;s:2:\"42\";i:3;s:2:\"30\";}s:5:\"limit\";s:1:\"4\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"200\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('28', 'Featured - Home Page', 'featured', 'a:6:{s:4:\"name\";s:20:\"Featured - Home Page\";s:7:\"product\";a:4:{i:0;s:2:\"43\";i:1;s:2:\"40\";i:2;s:2:\"42\";i:3;s:2:\"30\";}s:5:\"limit\";s:1:\"3\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"200\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('27', 'Slideshow - Home Page', 'slideshow', 'a:5:{s:4:\"name\";s:21:\"Slideshow - Home Page\";s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:3:\"670\";s:6:\"height\";s:3:\"370\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('31', 'Baner', 'banner', 'a:5:{s:4:\"name\";s:5:\"Baner\";s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:3:\"354\";s:6:\"height\";s:3:\"185\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('32', 'Slideshow - Main Page', 'slideshow', 'a:5:{s:4:\"name\";s:21:\"Slideshow - Main Page\";s:9:\"banner_id\";s:1:\"7\";s:5:\"width\";s:3:\"670\";s:6:\"height\";s:3:\"370\";s:6:\"status\";s:1:\"0\";}');
-INSERT INTO `oc_module` VALUES ('33', 'Банер на главной1', 'banner', 'a:5:{s:4:\"name\";s:31:\"Банер на главной1\";s:9:\"banner_id\";s:1:\"6\";s:5:\"width\";s:3:\"354\";s:6:\"height\";s:3:\"185\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('33', 'Банер на главной1', 'banner', 'a:5:{s:4:\"name\";s:31:\"Банер на главной1\";s:9:\"banner_id\";s:2:\"10\";s:5:\"width\";s:3:\"354\";s:6:\"height\";s:3:\"185\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('34', 'Баннер на главной под слайдшоу', 'banner', 'a:5:{s:4:\"name\";s:56:\"Баннер на главной под слайдшоу\";s:9:\"banner_id\";s:1:\"9\";s:5:\"width\";s:3:\"670\";s:6:\"height\";s:3:\"130\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('35', 'банер на главной справа2', 'banner', 'a:5:{s:4:\"name\";s:44:\"банер на главной справа2\";s:9:\"banner_id\";s:2:\"11\";s:5:\"width\";s:3:\"354\";s:6:\"height\";s:3:\"130\";s:6:\"status\";s:1:\"1\";}');
 
 -- ----------------------------
 -- Table structure for `oc_option`
