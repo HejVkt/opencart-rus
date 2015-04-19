@@ -13,6 +13,7 @@ h2 {
 	font-size: 27px;
 }
 h3 {
+    font-weight: bold;
 	font-size: 21px;
 }
 h4 {
@@ -117,7 +118,7 @@ div.required .control-label:before {
 	margin-bottom: 10px;
 }
 #search .input-lg {
-	height: 40px;
+	height: 32px;
 	line-height: 20px;
 	padding: 0 10px;
 }
@@ -293,30 +294,7 @@ div.required .control-label:before {
 #content {
 	min-height: 600px;
 }
-/* footer */
-footer {
-	margin-top: 30px;
-	padding-top: 30px;
-	background-color: #303030;
-	border-top: 1px solid #ddd;
-	color: #e2e2e2;
-}
-footer hr {
-	border-top: none;
-	border-bottom: 1px solid #666;
-}
-footer a {
-	color: #ccc;
-}
-footer a:hover {
-	color: #fff;
-}
-footer h5 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 13px;
-	font-weight: bold;
-	color: #fff;
-}
+
 /* alert */
 .alert {
 	padding: 8px 14px 8px 14px;
@@ -534,10 +512,10 @@ footer h5 {
 .product-thumb h4 {
 	font-weight: bold;
 }
+
 .product-thumb .caption {
-	padding: 0 20px;
-	min-height: 180px;
 }
+
 .product-list .product-thumb .caption {
 	margin-left: 230px;
 }
@@ -548,15 +526,24 @@ footer h5 {
 }
 }
 @media (max-width: 767px) {
-.product-list .product-thumb .caption {
-	min-height: 0;
-	margin-left: 0;
-	padding: 0 10px;
+    .product-list .product-thumb .caption {
+        min-height: 0;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+    .product-grid .product-thumb .caption {
+        min-height: 0;
+    }
 }
-.product-grid .product-thumb .caption {
-	min-height: 0;
+
+.product-thumb .caption a{
+    text-decoration: none;
 }
+
+.product-thumb .caption a:hover{
+    color: black;
 }
+
 .product-thumb .rating {
 	padding-bottom: 10px;
 }
@@ -574,20 +561,11 @@ footer h5 {
 .rating .fa-star + .fa-star-o {
 	color: #E69500;
 }
+
 h2.price {
 	margin: 0;
 }
-.product-thumb .price {
-	color: #444;
-}
-.product-thumb .price-new {
-	font-weight: 600;
-}
-.product-thumb .price-old {
-	color: #999;
-	text-decoration: line-through;
-	margin-left: 10px;
-}
+
 .product-thumb .price-tax {
 	color: #999;
 	font-size: 12px;
@@ -998,6 +976,7 @@ h2 {
 }
 #currency a span {
 	font-size:18px;
+    font-weight: bold;
 
 	display: inline-block;
     text-decoration: none;
@@ -1301,7 +1280,7 @@ h2 {
 /***************************************************************************************search**********************************************************************************/
 #search {
     position:relative;
-    width:300px;
+
     float:right;
     margin-top:8px;
 }
@@ -1335,17 +1314,20 @@ h2 {
     float:right;
     cursor:pointer;
     text-align:center;
-    font-size:13px;
+    font-size:15px;
     text-transform:uppercase;
     font-family: 'Cuprum', sans-serif;
     color:#fff;
-    line-height:32px;
+    line-height:35px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+
+    font-weight: bold;
 }
+
 #search input {
     background:#fff;
     float:left;
@@ -1382,13 +1364,15 @@ h2 {
     text-decoration:none;
     color:#2f2f2f
 }
+
 .price {
     font-size:16px;
     line-height:normal;
     color:#535355;
-    font-weight:normal;
+    font-weight:bold;
     font-family: 'Cuprum', sans-serif;
 }
+
 .price .price-new {
     margin-right:10px;
     color:#ec1919
@@ -1723,10 +1707,11 @@ a.button {
     text-decoration: none;
     cursor: pointer;
     background: #ff0000;
-    font-size:13px;
+    font-size:15px;
     line-height:21px;
     position:relative;
     overflow:hidden;
+    font-weight: bold;
 }
 a.button span {
     display:block;
@@ -1736,8 +1721,9 @@ a.button span {
     padding:6px 10px;
     white-space:nowrap;
     font-weight:normal;
-    font-size:13px;
-    line-height:21px;
+    font-size:15px;
+    font-weight: bold;
+    line-height:25px;
     font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
 }
@@ -1821,9 +1807,12 @@ a.button span {
 #module_cart .cart td a {
     font-weight:normal;
 }
+
 #module_cart .cart .image {
     display: none;
 }
+
+
 #module_cart .cart .image img {
     border: 1px solid #EEEEEE;
     text-align: left;
@@ -4442,8 +4431,8 @@ tbody .total {
 }
 #footer h3 {
     color:#535355;
-    font-weight:normal;
-    font-size:15px;
+    font-weight:bold;
+    font-size:17px;
     margin:25px 0 20px;
     font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
