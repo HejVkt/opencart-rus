@@ -1943,6 +1943,10 @@ a.button span {
     width:725px;
 }
 /* box */
+.box{
+    padding-right:20px;
+}
+
 #content .box.specials .box-product .price-old{display:block; padding-top:10px;}
 #content .box.specials {width:357px;float:left}
 #content .box.specials .image2 {float:left;margin-right:20px;padding-bottom:20px;}
@@ -1950,6 +1954,11 @@ a.button span {
 #content .box.specials .box-content {
     overflow:visible
 }
+
+.box.specials{
+
+}
+
 #content .box.specials .box-content .box-product  ul li {
     border-bottom:1px solid #e0e0e0;
     margin-bottom:20px;
@@ -1968,7 +1977,7 @@ a.button span {
     color:#535355;
     font-size:19px;
     text-transform:uppercase;
-    padding-bottom:20px;
+    padding-bottom:16px;
     padding-top:20px;
 
     margin-bottom:30px;
@@ -2228,12 +2237,15 @@ a.button span {
 .box-product .image2 img{
     display:inline-block;
     background:#f8f8f8;
+    max-width: 117px;
 }
+
 .box-product .image2 {
     display: block;
     text-align:center;
     padding-bottom:15px;
 }
+
 .special-container1 .name {
     padding-bottom:7px;
 }

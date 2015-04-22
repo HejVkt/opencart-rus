@@ -38,6 +38,9 @@
 <script src="catalog/view/theme/themesly/javascript/superfish.js" type="text/javascript"></script>
 <link href="catalog/view/theme/themesly/stylesheet/superfish.css" rel="stylesheet">
 
+<script src="catalog/view/theme/themesly/javascript/jcarousel.js" type="text/javascript"></script>
+<link href="catalog/view/theme/themesly/stylesheet/jcarousel.css" rel="stylesheet">
+
 <script src="catalog/view/theme/themesly/javascript/camera.js" type="text/javascript"></script>
 <link href="catalog/view/theme/themesly/stylesheet/camera.css" rel="stylesheet">
 

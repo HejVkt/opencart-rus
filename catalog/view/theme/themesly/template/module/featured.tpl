@@ -1,5 +1,5 @@
 <div class="box">
-    <div class="box-heading"><h3><?php echo $heading_title; ?></h3></div>
+    <div class="box-heading"><h3>Рекомендуемая продукция</h3></div>
 
     <div class="row">
       <?php foreach ($products as $product) { ?>
