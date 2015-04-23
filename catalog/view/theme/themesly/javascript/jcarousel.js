@@ -241,7 +241,7 @@
         inTail:      false,
         resizeTimer: null,
         lt:          null,
-        vertical:    false,
+        vertical:    true,
         rtl:         false,
         circular:    false,
         underflow:   false,

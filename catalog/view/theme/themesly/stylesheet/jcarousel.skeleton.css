@@ -7,7 +7,15 @@ Position must be relative!
 .jcarousel {
     position: relative;
     overflow: hidden;
-    height:300px;
+    height:275px;
+}
+
+.jcarousel a{
+}
+
+.jcarousel-wrapper a{
+    text-decoration: none;
+    color: #535355;
 }
 
 /*
@@ -16,7 +24,7 @@ You must ensure that the position is relative or absolute and
 that the width is big enough to contain all items.
 */
 .jcarousel ul {
-    width: 600px;
+    width: 350px;
     position: relative;
 
     /* Optional, required in this case since it's a <ul> element */
@@ -32,4 +40,31 @@ have a fixed width and height (but it's not required).
 .jcarousel li {
     /* Required only for block elements like <li>'s */
     /* float: left; */
+}
+
+.jcarousel-control-prev:hover{
+    color: #ec1919;
+}
+
+.jcarousel-control-next:hover{
+    color: #ec1919;
+}
+
+
+.jcarousel-control-prev, .jcarousel-control-next{
+    font-family: Cuprum, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #535355;
+}
+
+.inactive {
+    color: #868688 !important;
+    text-decoration: none;
+}
+
+.inactive {
+    color: #868688 !important;
+    text-decoration: none;
 }

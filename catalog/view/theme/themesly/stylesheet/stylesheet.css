@@ -3080,6 +3080,15 @@ ul {
     font-weight:normal;
     text-decoration: none;
 }
+
+.box-product li{
+    width: 350px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.box-product .description{
+}
+
 .product-info .price span {font-weight:normal}
 .product-info .price {
     background:#F7F7F7;

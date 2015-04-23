@@ -13,7 +13,7 @@
             <div class="clear"></div>
         </div>
     </div>
-</div>>
+</div>
 <div class="clear"></div>
 
 <?php echo $content_bottom; ?>
