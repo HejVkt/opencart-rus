@@ -38,13 +38,13 @@
             <div class="cart">
                 <a data-id="40;" onclick="cart.add('<?php echo $product['product_id']; ?>');" class="button addToCart"><span>Добавить в корзину</span><strong style="overflow: hidden; width: 0px; left: 50%; top: 50%; height: 0px;"></strong></a>
             </div>
-
+<!--
           <div class="button-group">
             <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
             <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
             <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
           </div>
-
+-->
         </div>
       </div>
       <?php } ?>
