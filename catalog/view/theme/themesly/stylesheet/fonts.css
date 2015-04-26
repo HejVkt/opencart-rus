@@ -1,0 +1,43 @@
+/* cyrillic */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cuprum'), local('Cuprum-Regular'), url(fonts/cuprum-regular.woff2) format('woff2'), url('fonts/Cuprum-Regular.ttf') format('truetype');
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cuprum'), local('Cuprum-Regular'), url(fonts/cuprum-regular-lat.woff2) format('woff2'), url('fonts/Cuprum-Regular.ttf') format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cuprum'), local('Cuprum-Regular'), url(fonts/cuprum-regular-lat-ext.woff2) format('woff2'), url('fonts/Cuprum-Regular.ttf') format('truetype');
+}
+/* cyrillic */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Cuprum Bold'), local('Cuprum-Bold'), url(fonts/curpum-bold-cyr.woff2) format('woff2'), url('fonts/Cuprum-Bold.ttf') format('truetype');
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Cuprum Bold'), local('Cuprum-Bold'), url(fonts/cuprum-bold-lat-ext.woff2) format('woff2'), url('fonts/Cuprum-Bold.ttf') format('truetype');
+}
+/* latin */
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Cuprum Bold'), local('Cuprum-Bold'), url(fonts/cuprum-bold-lat.woff2) format('woff2'), url('fonts/Cuprum-Bold.ttf') format('truetype');
+}

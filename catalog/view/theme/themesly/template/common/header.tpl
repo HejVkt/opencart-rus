@@ -30,8 +30,6 @@
 <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 <script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
-
 
 <link href="catalog/view/theme/themesly/stylesheet/stylesheet.css" rel="stylesheet">
 
@@ -44,8 +42,7 @@
 <script src="catalog/view/theme/themesly/javascript/camera.js" type="text/javascript"></script>
 <link href="catalog/view/theme/themesly/stylesheet/camera.css" rel="stylesheet">
 
-<link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Cuprum:400,700' rel='stylesheet' type='text/css'>
+<script src="catalog/view/theme/themesly/javascript/script.js" type="text/javascript"></script>
 
 <?php foreach ($styles as $style) { ?>
     <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
@@ -60,10 +57,10 @@
 </head>
 
 <body class="common-home">
-
+<p id="back-top"> <a href="#top"><span></span></a></p>
 <div class="bottom-space">
     <div class="outer">
-        <?php echo $currency; ?>
+        <?php //echo $currency; ?>
         <div class="clear"></div>
     </div>
 
@@ -89,9 +86,7 @@
 
                     <div class="clear"></div>
                     <div class="cart-position">
-                        <div class="cart-inner">
                             <?php echo $cart; ?>
-                        </div>
                     </div>
 
                     <div id="welcome">
@@ -111,10 +106,10 @@
                     </div>
                     <div class="clear"></div>
                 </div>
-                <div class="clear"></div>
-            </div>
-            <div id="menu">
                 <div id="search"><?php echo $search; ?></div>
+            </div>
+            <div class="clear"></div>
+            <div id="menu">
                 <div class="clear"></div>
                 <?php if ($categories) { $i=0; ?>
                 <ul class="menu">
@@ -144,25 +139,5 @@
             </div>
         </div>
         </header>
-
+        <div id="content">
         <div class="clear"></div>
-
-
-<!--
-<nav id="top">
-  <div class="container">
-    <?php echo $language; ?>
-    <div id="top-links" class="nav pull-right">
-      <ul class="list-inline">
-        <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li>
-        <li class="dropdown"><a href="<?php echo $account; ?>" title="<?php echo $text_account; ?>" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_account; ?></span> <span class="caret"></span></a>
-          <ul class="dropdown-menu dropdown-menu-right">
-
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
--->

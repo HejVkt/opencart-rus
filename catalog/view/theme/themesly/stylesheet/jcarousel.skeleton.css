@@ -60,11 +60,6 @@ have a fixed width and height (but it's not required).
 }
 
 .inactive {
-    color: #868688 !important;
-    text-decoration: none;
-}
-
-.inactive {
-    color: #868688 !important;
+    color: #B7B7B9 !important;
     text-decoration: none;
 }

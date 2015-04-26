@@ -1,3 +1,5 @@
+</div><!--- end divcontent -->
+<div class="clear"></div>
 <footer>
 <div class="footer-wrap">
     <div id="footer">
