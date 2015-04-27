@@ -42,6 +42,7 @@
 	-o-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
+    font-weight: bold;
 }
 #menu > ul > li > a:hover, #menu > ul > li.sfHover > a, #menu > ul > li.active > a   {
 	color:#fff; 
