@@ -929,6 +929,8 @@ h2 {
 #column-left {
     float: left;
     width:241px;
+    overflow: hidden;
+    margin-right: 20px;
 }
 
 #column-right {
@@ -945,11 +947,13 @@ h2 {
 }
 
 #column-left + #column-right + #content, #column-left + #content {
-    margin-left:261px;
+
 }
+
 #column-right + #content {
     margin-right:261px;
 }
+
 /* header */
 #header {
     padding:15px 20px 0;
@@ -2013,18 +2017,25 @@ a.button span {
 .box .box-content.inform {
     padding:0px 0 0;
 }
+
 .box .box-heading span {color:#ff0000}
 .box .box-heading {
     color:#535355;
-    font-size:19px;
+    font-size:21px;
     text-transform:uppercase;
     padding-bottom:16px;
-    padding-top:20px;
+    padding-top:0px;
 
+    font-weight: bold;
     margin-bottom:30px;
     border-bottom:1px solid #e0e0e0;
     font-family: 'Cuprum', sans-serif;
 }
+
+.header-modules .box .box-heading{
+    padding-top:30px;
+}
+
 .box .box-content {
     overflow:hidden;
 }
@@ -4962,4 +4973,103 @@ li.related-info:first-child {margin-left:0px}
 
 .container {
     padding-top:15px;
+}
+
+.thumbnail {
+    border-radius: 0px;
+}
+
+.img-thumbnail {
+    border-radius: 0px;
+}
+
+.nav-tabs>li>a{
+    border-radius: 0px;
+}
+
+.panel-group .panel{
+    border-radius: 0px;
+}
+
+.form-control{
+    border-radius: 0px;
+}
+
+.tooltip-inner {
+    border-radius: 0px;
+    background: #3f3f3f;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+table td{
+    border-collapse: collapse;
+}
+
+table tr{
+    border-collapse: collapse;
+}
+
+.table-bordered>thead>tr>td, .table-bordered>thead>tr>th{
+    border: 1px solid #ddd;
+}
+
+.well {
+    border-radius: 0px;
+}
+
+.alert{
+    border-radius: 0px;
+}
+
+.list-group{
+    border-radius: 0px;
+}
+
+a.list-group-item{
+    border-radius: 0px !important;
+}
+
+a.list-group-item{
+    border: 0px;
+    border-top: 1px solid #E3E3E3;
+    color: #7D7C7C;
+    text-decoration: none;
+    background: url("../image/marker-2.png") no-repeat center left 5px rgba(0, 0, 0, 0);
+    padding-left: 15px;
+}
+
+.list-group a.child{
+    background: url("../image/marker-2.png") no-repeat center left 15px rgba(0, 0, 0, 0) !important;
+}
+
+.list-group a.active, .list-group a.active:hover{
+    border: 0px;
+    border-top: 1px solid #E3E3E3;
+}
+
+a.list-group-item:hover{
+    color: #EC1919;
+    border: 0px;
+    border-top: 1px solid #E3E3E3;
+    background: url("../image/marker-2.png") no-repeat center left 5px rgba(0, 0, 0, 0);
+}
+
+.list-group{
+    text-decoration: none;
+}
+
+.list-group a.active, .list-group a.active:hover, .list-group a:hover {
+    background: url("../image/marker-2.png") no-repeat center left 5px rgba(0, 0, 0, 0);
+    border: 0px;
+    border-top: 1px solid #E3E3E3;
+}
+
+.list-group a.active:first-child, .list-group a:first-child{
+    border: 0px;
+}
+
+#column-left{
+    overflow: hidden;
 }
