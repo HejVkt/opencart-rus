@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2015-04-23 02:01:36
+Date: 2015-04-30 01:38:42
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,11 +34,12 @@ CREATE TABLE `oc_address` (
   `custom_field` text NOT NULL,
   PRIMARY KEY (`address_id`),
   KEY `customer_id` (`customer_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_address
 -- ----------------------------
+INSERT INTO `oc_address` VALUES ('1', '1', 'Alex', 'Sem', '', 'Adsad', '', 'Kirov', '610001', '176', '51', '');
 
 -- ----------------------------
 -- Table structure for `oc_affiliate`
@@ -771,7 +772,7 @@ CREATE TABLE `oc_currency` (
 -- ----------------------------
 -- Records of oc_currency
 -- ----------------------------
-INSERT INTO `oc_currency` VALUES ('1', 'Рубль', 'RUB', '', 'р.', '0', '1.00000000', '1', '2015-04-22 13:03:19');
+INSERT INTO `oc_currency` VALUES ('1', 'Рубль', 'RUB', '', 'р.', '0', '1.00000000', '1', '2015-04-30 02:27:52');
 
 -- ----------------------------
 -- Table structure for `oc_customer`
@@ -800,11 +801,12 @@ CREATE TABLE `oc_customer` (
   `token` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_customer
 -- ----------------------------
+INSERT INTO `oc_customer` VALUES ('1', '1', '0', 'Alex', 'Sem', 'sashsem@mail.ru', '123123', '', '7ed1e2de672367ed9c0ca288d11181f95e413290', '37b2073a7', 'a:0:{}', '', '0', '1', '', '192.168.1.138', '1', '1', '0', '', '2015-04-29 21:08:22');
 
 -- ----------------------------
 -- Table structure for `oc_customer_activity`
@@ -818,11 +820,13 @@ CREATE TABLE `oc_customer_activity` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`activity_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_customer_activity
 -- ----------------------------
+INSERT INTO `oc_customer_activity` VALUES ('1', '1', 'register', 'a:2:{s:11:\"customer_id\";s:1:\"1\";s:4:\"name\";s:8:\"Alex Sem\";}', '192.168.1.138', '2015-04-29 21:08:23');
+INSERT INTO `oc_customer_activity` VALUES ('2', '1', 'order_account', 'a:3:{s:11:\"customer_id\";s:1:\"1\";s:4:\"name\";s:8:\"Alex Sem\";s:8:\"order_id\";s:1:\"1\";}', '192.168.1.138', '2015-04-29 21:09:16');
 
 -- ----------------------------
 -- Table structure for `oc_customer_ban_ip`
@@ -899,11 +903,12 @@ CREATE TABLE `oc_customer_ip` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`customer_ip_id`),
   KEY `ip` (`ip`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_customer_ip
 -- ----------------------------
+INSERT INTO `oc_customer_ip` VALUES ('1', '1', '192.168.1.138', '2015-04-29 21:08:47');
 
 -- ----------------------------
 -- Table structure for `oc_customer_login`
@@ -1355,7 +1360,7 @@ CREATE TABLE `oc_layout_module` (
   `position` varchar(14) NOT NULL,
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`layout_module_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=120 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=122 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_layout_module
@@ -1373,6 +1378,7 @@ INSERT INTO `oc_layout_module` VALUES ('119', '1', 'featured.28', 'content_top',
 INSERT INTO `oc_layout_module` VALUES ('116', '1', 'banner.34', 'content_top', '3');
 INSERT INTO `oc_layout_module` VALUES ('115', '1', 'special.38', 'column_right', '4');
 INSERT INTO `oc_layout_module` VALUES ('114', '1', 'slideshow.27', 'content_top', '1');
+INSERT INTO `oc_layout_module` VALUES ('121', '2', 'bestseller.37', 'column_left', '1');
 
 -- ----------------------------
 -- Table structure for `oc_layout_route`
@@ -1384,7 +1390,7 @@ CREATE TABLE `oc_layout_route` (
   `store_id` int(11) NOT NULL,
   `route` varchar(255) NOT NULL,
   PRIMARY KEY (`layout_route_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_layout_route
@@ -1393,7 +1399,6 @@ INSERT INTO `oc_layout_route` VALUES ('38', '6', '0', 'account/%');
 INSERT INTO `oc_layout_route` VALUES ('17', '10', '0', 'affiliate/%');
 INSERT INTO `oc_layout_route` VALUES ('44', '3', '0', 'product/category');
 INSERT INTO `oc_layout_route` VALUES ('64', '1', '0', 'common/home');
-INSERT INTO `oc_layout_route` VALUES ('20', '2', '0', 'product/product');
 INSERT INTO `oc_layout_route` VALUES ('24', '11', '0', 'information/information');
 INSERT INTO `oc_layout_route` VALUES ('23', '7', '0', 'checkout/%');
 INSERT INTO `oc_layout_route` VALUES ('31', '8', '0', 'information/contact');
@@ -1402,6 +1407,8 @@ INSERT INTO `oc_layout_route` VALUES ('34', '4', '0', '');
 INSERT INTO `oc_layout_route` VALUES ('45', '5', '0', 'product/manufacturer');
 INSERT INTO `oc_layout_route` VALUES ('52', '12', '0', 'product/compare');
 INSERT INTO `oc_layout_route` VALUES ('53', '13', '0', 'product/search');
+INSERT INTO `oc_layout_route` VALUES ('67', '2', '0', 'product/product');
+INSERT INTO `oc_layout_route` VALUES ('68', '2', '0', '');
 
 -- ----------------------------
 -- Table structure for `oc_length_class`
@@ -1566,7 +1573,7 @@ INSERT INTO `oc_module` VALUES ('33', 'Банер на главной1', 'banner
 INSERT INTO `oc_module` VALUES ('34', 'Баннер на главной под слайдшоу', 'banner', 'a:5:{s:4:\"name\";s:56:\"Баннер на главной под слайдшоу\";s:9:\"banner_id\";s:1:\"9\";s:5:\"width\";s:3:\"670\";s:6:\"height\";s:3:\"130\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('35', 'банер на главной справа2', 'banner', 'a:5:{s:4:\"name\";s:44:\"банер на главной справа2\";s:9:\"banner_id\";s:2:\"11\";s:5:\"width\";s:3:\"354\";s:6:\"height\";s:3:\"130\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('36', 'новые поступления', 'latest', 'a:5:{s:4:\"name\";s:33:\"новые поступления\";s:5:\"limit\";s:1:\"5\";s:5:\"width\";s:3:\"200\";s:6:\"height\";s:3:\"200\";s:6:\"status\";s:1:\"1\";}');
-INSERT INTO `oc_module` VALUES ('37', 'Хиты продаж на главной', 'bestseller', 'a:5:{s:4:\"name\";s:41:\"Хиты продаж на главной\";s:5:\"limit\";s:1:\"5\";s:5:\"width\";s:3:\"357\";s:6:\"height\";s:3:\"200\";s:6:\"status\";s:1:\"1\";}');
+INSERT INTO `oc_module` VALUES ('37', 'Хиты продаж в продукции', 'bestseller', 'a:5:{s:4:\"name\";s:43:\"Хиты продаж в продукции\";s:5:\"limit\";s:1:\"5\";s:5:\"width\";s:3:\"203\";s:6:\"height\";s:3:\"203\";s:6:\"status\";s:1:\"1\";}');
 INSERT INTO `oc_module` VALUES ('38', 'Акции на главной', 'special', 'a:5:{s:4:\"name\";s:30:\"Акции на главной\";s:5:\"limit\";s:2:\"10\";s:5:\"width\";s:3:\"357\";s:6:\"height\";s:3:\"200\";s:6:\"status\";s:1:\"1\";}');
 
 -- ----------------------------
@@ -1748,11 +1755,12 @@ CREATE TABLE `oc_order` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`order_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order
 -- ----------------------------
+INSERT INTO `oc_order` VALUES ('1', '0', 'INV-2015-00', '0', 'Интернет магазин Opencart &quot;Русская сборка&quot;', 'http://opencart-rus.my/', '1', '1', 'Alex', 'Sem', 'sashsem@mail.ru', '123123', '', 'b:0;', 'Alex', 'Sem', '', 'Adsad', '', 'Kirov', '610001', 'Российская Федерация', '176', 'Белгородская область', '51', '', 'b:0;', 'Оплата при доставке', 'cod', '', '', '', '', '', '', '', '', '0', '', '0', '', 'a:0:{}', '', '', '123123123', '500.0000', '1', '0', '0.0000', '0', '', '1', '1', 'RUB', '1.00000000', '192.168.1.138', '', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36', 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4', '2015-04-29 21:09:03', '2015-04-29 21:09:13');
 
 -- ----------------------------
 -- Table structure for `oc_order_custom_field`
@@ -1851,11 +1859,12 @@ CREATE TABLE `oc_order_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`order_history_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order_history
 -- ----------------------------
+INSERT INTO `oc_order_history` VALUES ('1', '1', '1', '0', '', '2015-04-29 21:09:13');
 
 -- ----------------------------
 -- Table structure for `oc_order_option`
@@ -1893,11 +1902,12 @@ CREATE TABLE `oc_order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL,
   PRIMARY KEY (`order_product_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order_product
 -- ----------------------------
+INSERT INTO `oc_order_product` VALUES ('1', '1', '43', 'MacBook', 'Product 16', '1', '500.0000', '500.0000', '18.0000', '600');
 
 -- ----------------------------
 -- Table structure for `oc_order_recurring`
@@ -1988,11 +1998,13 @@ CREATE TABLE `oc_order_total` (
   `sort_order` int(3) NOT NULL,
   PRIMARY KEY (`order_total_id`),
   KEY `order_id` (`order_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_order_total
 -- ----------------------------
+INSERT INTO `oc_order_total` VALUES ('1', '1', 'sub_total', 'Сумма', '500.0000', '1');
+INSERT INTO `oc_order_total` VALUES ('2', '1', 'total', 'Итого', '500.0000', '9');
 
 -- ----------------------------
 -- Table structure for `oc_order_voucher`
@@ -2062,17 +2074,17 @@ CREATE TABLE `oc_product` (
 -- ----------------------------
 INSERT INTO `oc_product` VALUES ('28', 'Product 1', '', '', '', '', '', '', '', '939', '7', 'catalog/demo/htc_touch_hd_1.jpg', '5', '1', '100.0000', '200', '9', '2009-02-03', '146.40000000', '2', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:06:50', '2011-09-30 01:05:39');
 INSERT INTO `oc_product` VALUES ('29', 'Product 2', '', '', '', '', '', '', '', '999', '6', 'catalog/demo/palm_treo_pro_1.jpg', '6', '1', '279.9900', '0', '9', '2009-02-03', '133.00000000', '2', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:42:17', '2015-04-23 01:00:16');
-INSERT INTO `oc_product` VALUES ('30', 'Product 3', '', '', '', '', '', '', '', '7', '6', 'catalog/demo/canon_eos_5d_1.jpg', '9', '1', '100.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 16:59:00', '2011-09-30 01:05:23');
+INSERT INTO `oc_product` VALUES ('30', 'Product 3', '', '', '', '', '', '', '', '7', '6', 'catalog/demo/canon_eos_5d_1.jpg', '9', '1', '100.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '2', '2009-02-03 16:59:00', '2011-09-30 01:05:23');
 INSERT INTO `oc_product` VALUES ('31', 'Product 4', '', '', '', '', '', '', '', '1000', '6', 'catalog/demo/nikon_d300_1.jpg', '0', '1', '80.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '3', '1', '1', '0', '1', '0', '2009-02-03 17:00:10', '2011-09-30 01:06:00');
 INSERT INTO `oc_product` VALUES ('32', 'Product 5', '', '', '', '', '', '', '', '999', '6', 'catalog/demo/ipod_touch_1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 17:07:26', '2011-09-30 01:07:22');
 INSERT INTO `oc_product` VALUES ('33', 'Product 6', '', '', '', '', '', '', '', '1000', '6', 'catalog/demo/samsung_syncmaster_941bw.jpg', '0', '1', '200.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 17:08:31', '2011-09-30 01:06:29');
 INSERT INTO `oc_product` VALUES ('34', 'Product 7', '', '', '', '', '', '', '', '1000', '6', 'catalog/demo/ipod_shuffle_1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:07:54', '2011-09-30 01:07:17');
 INSERT INTO `oc_product` VALUES ('35', 'Product 8', '', '', '', '', '', '', '', '1000', '5', '', '0', '0', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 18:08:31', '2011-09-30 01:06:17');
 INSERT INTO `oc_product` VALUES ('36', 'Product 9', '', '', '', '', '', '', '', '994', '6', 'catalog/demo/ipod_nano_1.jpg', '8', '0', '100.0000', '100', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 18:09:19', '2011-09-30 01:07:12');
-INSERT INTO `oc_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '970', '5', 'catalog/demo/iphone_1.jpg', '8', '1', '101.0000', '0', '9', '2009-02-03', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '1', '2009-02-03 21:07:12', '2011-09-30 01:06:53');
+INSERT INTO `oc_product` VALUES ('40', 'product 11', '', '', '', '', '', '', '', '970', '5', 'catalog/demo/iphone_1.jpg', '8', '1', '101.0000', '0', '9', '2009-02-03', '10.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '167', '2009-02-03 21:07:12', '2011-09-30 01:06:53');
 INSERT INTO `oc_product` VALUES ('41', 'Product 14', '', '', '', '', '', '', '', '977', '5', 'catalog/demo/imac_1.jpg', '8', '1', '100.0000', '0', '9', '2009-02-03', '5.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '1', '1', '1', '0', '1', '0', '2009-02-03 21:07:26', '2015-04-23 00:59:54');
-INSERT INTO `oc_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '990', '5', 'catalog/demo/apple_cinema_30.jpg', '8', '1', '100.0000', '400', '9', '2009-02-04', '12.50000000', '1', '1.00000000', '2.00000000', '3.00000000', '1', '1', '2', '0', '1', '0', '2009-02-03 21:07:37', '2015-04-22 12:17:01');
-INSERT INTO `oc_product` VALUES ('43', 'Product 16', '', '', '', '', '', '', '', '929', '5', 'catalog/demo/macbook_1.jpg', '8', '0', '500.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '3', '2009-02-03 21:07:49', '2011-09-30 01:05:46');
+INSERT INTO `oc_product` VALUES ('42', 'Product 15', '', '', '', '', '', '', '', '990', '5', 'catalog/demo/apple_cinema_30.jpg', '8', '1', '100.0000', '400', '9', '2009-02-04', '12.50000000', '1', '1.00000000', '2.00000000', '3.00000000', '1', '1', '2', '0', '1', '27', '2009-02-03 21:07:37', '2015-04-22 12:17:01');
+INSERT INTO `oc_product` VALUES ('43', 'Product 16', '', '', '', '', '', '', '', '929', '5', 'catalog/demo/macbook_1.jpg', '8', '0', '500.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '9', '2009-02-03 21:07:49', '2011-09-30 01:05:46');
 INSERT INTO `oc_product` VALUES ('44', 'Product 17', '', '', '', '', '', '', '', '1000', '5', 'catalog/demo/macbook_air_1.jpg', '8', '1', '1000.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:00', '2011-09-30 01:05:53');
 INSERT INTO `oc_product` VALUES ('45', 'Product 18', '', '', '', '', '', '', '', '998', '5', 'catalog/demo/macbook_pro_1.jpg', '8', '1', '2000.0000', '0', '100', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:17', '2011-09-15 22:22:01');
 INSERT INTO `oc_product` VALUES ('46', 'Product 19', '', '', '', '', '', '', '', '1000', '5', 'catalog/demo/sony_vaio_1.jpg', '10', '1', '1000.0000', '0', '9', '2009-02-03', '0.00000000', '1', '0.00000000', '0.00000000', '0.00000000', '2', '1', '1', '0', '1', '0', '2009-02-03 21:08:29', '2011-09-30 01:06:39');
@@ -2705,7 +2717,7 @@ CREATE TABLE `oc_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL,
   PRIMARY KEY (`setting_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=404 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=644 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of oc_setting
@@ -2737,130 +2749,130 @@ INSERT INTO `oc_setting` VALUES ('54', '0', 'reward', 'reward_status', '1', '0')
 INSERT INTO `oc_setting` VALUES ('146', '0', 'category', 'category_status', '1', '0');
 INSERT INTO `oc_setting` VALUES ('158', '0', 'account', 'account_status', '1', '0');
 INSERT INTO `oc_setting` VALUES ('159', '0', 'affiliate', 'affiliate_status', '1', '0');
-INSERT INTO `oc_setting` VALUES ('376', '0', 'config', 'config_mail_smtp_username', '', '0');
-INSERT INTO `oc_setting` VALUES ('377', '0', 'config', 'config_mail_smtp_password', '', '0');
-INSERT INTO `oc_setting` VALUES ('378', '0', 'config', 'config_mail_smtp_port', '25', '0');
-INSERT INTO `oc_setting` VALUES ('379', '0', 'config', 'config_mail_smtp_timeout', '5', '0');
-INSERT INTO `oc_setting` VALUES ('380', '0', 'config', 'config_mail_alert', '', '0');
-INSERT INTO `oc_setting` VALUES ('381', '0', 'config', 'config_fraud_detection', '0', '0');
-INSERT INTO `oc_setting` VALUES ('382', '0', 'config', 'config_fraud_key', '', '0');
-INSERT INTO `oc_setting` VALUES ('383', '0', 'config', 'config_fraud_score', '', '0');
-INSERT INTO `oc_setting` VALUES ('384', '0', 'config', 'config_fraud_status_id', '7', '0');
-INSERT INTO `oc_setting` VALUES ('385', '0', 'config', 'config_secure', '0', '0');
-INSERT INTO `oc_setting` VALUES ('386', '0', 'config', 'config_shared', '0', '0');
-INSERT INTO `oc_setting` VALUES ('387', '0', 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', '0');
-INSERT INTO `oc_setting` VALUES ('375', '0', 'config', 'config_mail_smtp_hostname', '', '0');
-INSERT INTO `oc_setting` VALUES ('374', '0', 'config', 'config_mail_parameter', '', '0');
-INSERT INTO `oc_setting` VALUES ('373', '0', 'config', 'config_mail_protocol', 'mail', '0');
+INSERT INTO `oc_setting` VALUES ('632', '0', 'config', 'config_maintenance', '0', '0');
+INSERT INTO `oc_setting` VALUES ('633', '0', 'config', 'config_password', '1', '0');
+INSERT INTO `oc_setting` VALUES ('634', '0', 'config', 'config_encryption', '45f08b35fb15aa992ef05fbfb3f597c0', '0');
+INSERT INTO `oc_setting` VALUES ('635', '0', 'config', 'config_compression', '0', '0');
+INSERT INTO `oc_setting` VALUES ('636', '0', 'config', 'config_error_display', '1', '0');
+INSERT INTO `oc_setting` VALUES ('637', '0', 'config', 'config_error_log', '1', '0');
+INSERT INTO `oc_setting` VALUES ('638', '0', 'config', 'config_error_filename', 'error.log', '0');
+INSERT INTO `oc_setting` VALUES ('639', '0', 'config', 'config_google_analytics', '', '0');
+INSERT INTO `oc_setting` VALUES ('643', '0', 'config', 'config_google_captcha_status', '0', '0');
+INSERT INTO `oc_setting` VALUES ('641', '0', 'config', 'config_google_captcha_public', '', '0');
+INSERT INTO `oc_setting` VALUES ('642', '0', 'config', 'config_google_captcha_secret', '', '0');
+INSERT INTO `oc_setting` VALUES ('640', '0', 'config', 'config_google_analytics_status', '0', '0');
 INSERT INTO `oc_setting` VALUES ('94', '0', 'voucher', 'voucher_sort_order', '8', '0');
 INSERT INTO `oc_setting` VALUES ('95', '0', 'voucher', 'voucher_status', '1', '0');
-INSERT INTO `oc_setting` VALUES ('372', '0', 'config', 'config_ftp_status', '0', '0');
-INSERT INTO `oc_setting` VALUES ('371', '0', 'config', 'config_ftp_root', '', '0');
 INSERT INTO `oc_setting` VALUES ('103', '0', 'free_checkout', 'free_checkout_status', '1', '0');
 INSERT INTO `oc_setting` VALUES ('104', '0', 'free_checkout', 'free_checkout_order_status_id', '1', '0');
-INSERT INTO `oc_setting` VALUES ('367', '0', 'config', 'config_ftp_hostname', 'opencart-rus.my', '0');
-INSERT INTO `oc_setting` VALUES ('368', '0', 'config', 'config_ftp_port', '21', '0');
-INSERT INTO `oc_setting` VALUES ('369', '0', 'config', 'config_ftp_username', '', '0');
-INSERT INTO `oc_setting` VALUES ('370', '0', 'config', 'config_ftp_password', '', '0');
-INSERT INTO `oc_setting` VALUES ('366', '0', 'config', 'config_image_location_height', '50', '0');
-INSERT INTO `oc_setting` VALUES ('365', '0', 'config', 'config_image_location_width', '268', '0');
-INSERT INTO `oc_setting` VALUES ('364', '0', 'config', 'config_image_cart_height', '47', '0');
-INSERT INTO `oc_setting` VALUES ('363', '0', 'config', 'config_image_cart_width', '47', '0');
-INSERT INTO `oc_setting` VALUES ('362', '0', 'config', 'config_image_wishlist_height', '47', '0');
-INSERT INTO `oc_setting` VALUES ('361', '0', 'config', 'config_image_wishlist_width', '47', '0');
-INSERT INTO `oc_setting` VALUES ('360', '0', 'config', 'config_image_compare_height', '90', '0');
-INSERT INTO `oc_setting` VALUES ('358', '0', 'config', 'config_image_related_height', '80', '0');
-INSERT INTO `oc_setting` VALUES ('359', '0', 'config', 'config_image_compare_width', '90', '0');
-INSERT INTO `oc_setting` VALUES ('357', '0', 'config', 'config_image_related_width', '80', '0');
-INSERT INTO `oc_setting` VALUES ('356', '0', 'config', 'config_image_additional_height', '74', '0');
-INSERT INTO `oc_setting` VALUES ('355', '0', 'config', 'config_image_additional_width', '74', '0');
-INSERT INTO `oc_setting` VALUES ('354', '0', 'config', 'config_image_product_height', '228', '0');
-INSERT INTO `oc_setting` VALUES ('353', '0', 'config', 'config_image_product_width', '228', '0');
-INSERT INTO `oc_setting` VALUES ('352', '0', 'config', 'config_image_popup_height', '500', '0');
-INSERT INTO `oc_setting` VALUES ('351', '0', 'config', 'config_image_popup_width', '500', '0');
-INSERT INTO `oc_setting` VALUES ('350', '0', 'config', 'config_image_thumb_height', '228', '0');
-INSERT INTO `oc_setting` VALUES ('349', '0', 'config', 'config_image_thumb_width', '228', '0');
-INSERT INTO `oc_setting` VALUES ('348', '0', 'config', 'config_image_category_height', '80', '0');
-INSERT INTO `oc_setting` VALUES ('347', '0', 'config', 'config_image_category_width', '80', '0');
-INSERT INTO `oc_setting` VALUES ('346', '0', 'config', 'config_icon', 'catalog/cart.png', '0');
-INSERT INTO `oc_setting` VALUES ('345', '0', 'config', 'config_logo', 'catalog/logo.png', '0');
-INSERT INTO `oc_setting` VALUES ('344', '0', 'config', 'config_return_status_id', '2', '0');
-INSERT INTO `oc_setting` VALUES ('343', '0', 'config', 'config_return_id', '0', '0');
-INSERT INTO `oc_setting` VALUES ('342', '0', 'config', 'config_affiliate_mail', '0', '0');
-INSERT INTO `oc_setting` VALUES ('341', '0', 'config', 'config_affiliate_id', '4', '0');
-INSERT INTO `oc_setting` VALUES ('340', '0', 'config', 'config_affiliate_commission', '5', '0');
-INSERT INTO `oc_setting` VALUES ('339', '0', 'config', 'config_affiliate_auto', '0', '0');
-INSERT INTO `oc_setting` VALUES ('338', '0', 'config', 'config_affiliate_approval', '0', '0');
-INSERT INTO `oc_setting` VALUES ('337', '0', 'config', 'config_stock_checkout', '0', '0');
-INSERT INTO `oc_setting` VALUES ('336', '0', 'config', 'config_stock_warning', '0', '0');
-INSERT INTO `oc_setting` VALUES ('335', '0', 'config', 'config_stock_display', '0', '0');
-INSERT INTO `oc_setting` VALUES ('334', '0', 'config', 'config_order_mail', '1', '0');
-INSERT INTO `oc_setting` VALUES ('333', '0', 'config', 'config_complete_status', 'a:1:{i:0;s:1:\"5\";}', '1');
-INSERT INTO `oc_setting` VALUES ('332', '0', 'config', 'config_processing_status', 'a:1:{i:0;s:1:\"2\";}', '1');
-INSERT INTO `oc_setting` VALUES ('331', '0', 'config', 'config_order_status_id', '1', '0');
-INSERT INTO `oc_setting` VALUES ('330', '0', 'config', 'config_checkout_id', '5', '0');
-INSERT INTO `oc_setting` VALUES ('329', '0', 'config', 'config_checkout_guest', '1', '0');
-INSERT INTO `oc_setting` VALUES ('328', '0', 'config', 'config_cart_weight', '1', '0');
-INSERT INTO `oc_setting` VALUES ('327', '0', 'config', 'config_api_id', '1', '0');
-INSERT INTO `oc_setting` VALUES ('326', '0', 'config', 'config_invoice_prefix', 'INV-2015-00', '0');
-INSERT INTO `oc_setting` VALUES ('325', '0', 'config', 'config_account_mail', '0', '0');
-INSERT INTO `oc_setting` VALUES ('324', '0', 'config', 'config_account_id', '3', '0');
-INSERT INTO `oc_setting` VALUES ('323', '0', 'config', 'config_login_attempts', '5', '0');
-INSERT INTO `oc_setting` VALUES ('322', '0', 'config', 'config_customer_price', '0', '0');
-INSERT INTO `oc_setting` VALUES ('321', '0', 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:\"1\";}', '1');
-INSERT INTO `oc_setting` VALUES ('320', '0', 'config', 'config_customer_group_id', '1', '0');
-INSERT INTO `oc_setting` VALUES ('319', '0', 'config', 'config_customer_online', '0', '0');
-INSERT INTO `oc_setting` VALUES ('318', '0', 'config', 'config_tax_customer', 'shipping', '0');
-INSERT INTO `oc_setting` VALUES ('317', '0', 'config', 'config_tax_default', 'shipping', '0');
-INSERT INTO `oc_setting` VALUES ('316', '0', 'config', 'config_tax', '0', '0');
-INSERT INTO `oc_setting` VALUES ('315', '0', 'config', 'config_voucher_max', '1000', '0');
-INSERT INTO `oc_setting` VALUES ('314', '0', 'config', 'config_voucher_min', '1', '0');
-INSERT INTO `oc_setting` VALUES ('313', '0', 'config', 'config_review_mail', '0', '0');
-INSERT INTO `oc_setting` VALUES ('312', '0', 'config', 'config_review_guest', '1', '0');
-INSERT INTO `oc_setting` VALUES ('311', '0', 'config', 'config_review_status', '1', '0');
-INSERT INTO `oc_setting` VALUES ('310', '0', 'config', 'config_limit_admin', '20', '0');
-INSERT INTO `oc_setting` VALUES ('309', '0', 'config', 'config_product_description_length', '50', '0');
-INSERT INTO `oc_setting` VALUES ('308', '0', 'config', 'config_product_limit', '15', '0');
-INSERT INTO `oc_setting` VALUES ('307', '0', 'config', 'config_product_count', '1', '0');
-INSERT INTO `oc_setting` VALUES ('306', '0', 'config', 'config_weight_class_id', '1', '0');
-INSERT INTO `oc_setting` VALUES ('305', '0', 'config', 'config_length_class_id', '1', '0');
-INSERT INTO `oc_setting` VALUES ('304', '0', 'config', 'config_currency_auto', '1', '0');
-INSERT INTO `oc_setting` VALUES ('302', '0', 'config', 'config_admin_language', 'ru', '0');
-INSERT INTO `oc_setting` VALUES ('303', '0', 'config', 'config_currency', 'RUB', '0');
-INSERT INTO `oc_setting` VALUES ('301', '0', 'config', 'config_language', 'ru', '0');
-INSERT INTO `oc_setting` VALUES ('300', '0', 'config', 'config_zone_id', '', '0');
-INSERT INTO `oc_setting` VALUES ('297', '0', 'config', 'config_template', 'themesly', '0');
-INSERT INTO `oc_setting` VALUES ('298', '0', 'config', 'config_layout_id', '4', '0');
-INSERT INTO `oc_setting` VALUES ('299', '0', 'config', 'config_country_id', '176', '0');
-INSERT INTO `oc_setting` VALUES ('289', '0', 'config', 'config_telephone', '495 999-99-99', '0');
-INSERT INTO `oc_setting` VALUES ('290', '0', 'config', 'config_fax', '495 888-88-88', '0');
-INSERT INTO `oc_setting` VALUES ('291', '0', 'config', 'config_image', '', '0');
-INSERT INTO `oc_setting` VALUES ('292', '0', 'config', 'config_open', '', '0');
-INSERT INTO `oc_setting` VALUES ('293', '0', 'config', 'config_comment', '', '0');
-INSERT INTO `oc_setting` VALUES ('294', '0', 'config', 'config_meta_title', 'Интернет магазин Opencart &quot;Русская сборка&quot;', '0');
-INSERT INTO `oc_setting` VALUES ('295', '0', 'config', 'config_meta_description', 'Мой магазин', '0');
-INSERT INTO `oc_setting` VALUES ('296', '0', 'config', 'config_meta_keyword', '', '0');
-INSERT INTO `oc_setting` VALUES ('288', '0', 'config', 'config_email', 'sashsem@mail.ru', '0');
-INSERT INTO `oc_setting` VALUES ('287', '0', 'config', 'config_geocode', '', '0');
-INSERT INTO `oc_setting` VALUES ('286', '0', 'config', 'config_address', 'г. Москва, ул. Ленина 10 оф. 32', '0');
-INSERT INTO `oc_setting` VALUES ('285', '0', 'config', 'config_owner', 'Иванов Иван', '0');
-INSERT INTO `oc_setting` VALUES ('284', '0', 'config', 'config_name', 'Интернет магазин Opencart &quot;Русская сборка&quot;', '0');
-INSERT INTO `oc_setting` VALUES ('388', '0', 'config', 'config_seo_url', '0', '0');
-INSERT INTO `oc_setting` VALUES ('389', '0', 'config', 'config_file_max_size', '300000', '0');
-INSERT INTO `oc_setting` VALUES ('390', '0', 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', '0');
-INSERT INTO `oc_setting` VALUES ('391', '0', 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', '0');
-INSERT INTO `oc_setting` VALUES ('392', '0', 'config', 'config_maintenance', '0', '0');
-INSERT INTO `oc_setting` VALUES ('393', '0', 'config', 'config_password', '1', '0');
-INSERT INTO `oc_setting` VALUES ('394', '0', 'config', 'config_encryption', '45f08b35fb15aa992ef05fbfb3f597c0', '0');
-INSERT INTO `oc_setting` VALUES ('395', '0', 'config', 'config_compression', '0', '0');
-INSERT INTO `oc_setting` VALUES ('396', '0', 'config', 'config_error_display', '1', '0');
-INSERT INTO `oc_setting` VALUES ('397', '0', 'config', 'config_error_log', '1', '0');
-INSERT INTO `oc_setting` VALUES ('398', '0', 'config', 'config_error_filename', 'error.log', '0');
-INSERT INTO `oc_setting` VALUES ('399', '0', 'config', 'config_google_analytics', '', '0');
-INSERT INTO `oc_setting` VALUES ('400', '0', 'config', 'config_google_analytics_status', '0', '0');
-INSERT INTO `oc_setting` VALUES ('401', '0', 'config', 'config_google_captcha_public', '', '0');
-INSERT INTO `oc_setting` VALUES ('402', '0', 'config', 'config_google_captcha_secret', '', '0');
-INSERT INTO `oc_setting` VALUES ('403', '0', 'config', 'config_google_captcha_status', '0', '0');
+INSERT INTO `oc_setting` VALUES ('628', '0', 'config', 'config_seo_url', '0', '0');
+INSERT INTO `oc_setting` VALUES ('629', '0', 'config', 'config_file_max_size', '300000', '0');
+INSERT INTO `oc_setting` VALUES ('630', '0', 'config', 'config_file_ext_allowed', 'zip\r\ntxt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc', '0');
+INSERT INTO `oc_setting` VALUES ('631', '0', 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/tiff\r\nimage/svg+xml\r\napplication/zip\r\n&quot;application/zip&quot;\r\napplication/x-zip\r\n&quot;application/x-zip&quot;\r\napplication/x-zip-compressed\r\n&quot;application/x-zip-compressed&quot;\r\napplication/rar\r\n&quot;application/rar&quot;\r\napplication/x-rar\r\n&quot;application/x-rar&quot;\r\napplication/x-rar-compressed\r\n&quot;application/x-rar-compressed&quot;\r\napplication/octet-stream\r\n&quot;application/octet-stream&quot;\r\naudio/mpeg\r\nvideo/quicktime\r\napplication/pdf', '0');
+INSERT INTO `oc_setting` VALUES ('627', '0', 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai\'hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', '0');
+INSERT INTO `oc_setting` VALUES ('625', '0', 'config', 'config_secure', '0', '0');
+INSERT INTO `oc_setting` VALUES ('626', '0', 'config', 'config_shared', '0', '0');
+INSERT INTO `oc_setting` VALUES ('624', '0', 'config', 'config_fraud_status_id', '7', '0');
+INSERT INTO `oc_setting` VALUES ('623', '0', 'config', 'config_fraud_score', '', '0');
+INSERT INTO `oc_setting` VALUES ('622', '0', 'config', 'config_fraud_key', '', '0');
+INSERT INTO `oc_setting` VALUES ('621', '0', 'config', 'config_fraud_detection', '0', '0');
+INSERT INTO `oc_setting` VALUES ('620', '0', 'config', 'config_mail_alert', '', '0');
+INSERT INTO `oc_setting` VALUES ('619', '0', 'config', 'config_mail_smtp_timeout', '5', '0');
+INSERT INTO `oc_setting` VALUES ('618', '0', 'config', 'config_mail_smtp_port', '25', '0');
+INSERT INTO `oc_setting` VALUES ('617', '0', 'config', 'config_mail_smtp_password', '', '0');
+INSERT INTO `oc_setting` VALUES ('615', '0', 'config', 'config_mail_smtp_hostname', '', '0');
+INSERT INTO `oc_setting` VALUES ('616', '0', 'config', 'config_mail_smtp_username', '', '0');
+INSERT INTO `oc_setting` VALUES ('614', '0', 'config', 'config_mail_parameter', '', '0');
+INSERT INTO `oc_setting` VALUES ('613', '0', 'config', 'config_mail_protocol', 'mail', '0');
+INSERT INTO `oc_setting` VALUES ('612', '0', 'config', 'config_ftp_status', '0', '0');
+INSERT INTO `oc_setting` VALUES ('611', '0', 'config', 'config_ftp_root', '', '0');
+INSERT INTO `oc_setting` VALUES ('610', '0', 'config', 'config_ftp_password', '', '0');
+INSERT INTO `oc_setting` VALUES ('608', '0', 'config', 'config_ftp_port', '21', '0');
+INSERT INTO `oc_setting` VALUES ('609', '0', 'config', 'config_ftp_username', '', '0');
+INSERT INTO `oc_setting` VALUES ('607', '0', 'config', 'config_ftp_hostname', 'opencart-rus.my', '0');
+INSERT INTO `oc_setting` VALUES ('606', '0', 'config', 'config_image_location_height', '50', '0');
+INSERT INTO `oc_setting` VALUES ('604', '0', 'config', 'config_image_cart_height', '47', '0');
+INSERT INTO `oc_setting` VALUES ('605', '0', 'config', 'config_image_location_width', '268', '0');
+INSERT INTO `oc_setting` VALUES ('603', '0', 'config', 'config_image_cart_width', '47', '0');
+INSERT INTO `oc_setting` VALUES ('601', '0', 'config', 'config_image_wishlist_width', '47', '0');
+INSERT INTO `oc_setting` VALUES ('602', '0', 'config', 'config_image_wishlist_height', '47', '0');
+INSERT INTO `oc_setting` VALUES ('600', '0', 'config', 'config_image_compare_height', '90', '0');
+INSERT INTO `oc_setting` VALUES ('599', '0', 'config', 'config_image_compare_width', '90', '0');
+INSERT INTO `oc_setting` VALUES ('598', '0', 'config', 'config_image_related_height', '80', '0');
+INSERT INTO `oc_setting` VALUES ('597', '0', 'config', 'config_image_related_width', '80', '0');
+INSERT INTO `oc_setting` VALUES ('596', '0', 'config', 'config_image_additional_height', '90', '0');
+INSERT INTO `oc_setting` VALUES ('595', '0', 'config', 'config_image_additional_width', '90', '0');
+INSERT INTO `oc_setting` VALUES ('594', '0', 'config', 'config_image_product_height', '228', '0');
+INSERT INTO `oc_setting` VALUES ('593', '0', 'config', 'config_image_product_width', '228', '0');
+INSERT INTO `oc_setting` VALUES ('592', '0', 'config', 'config_image_popup_height', '600', '0');
+INSERT INTO `oc_setting` VALUES ('591', '0', 'config', 'config_image_popup_width', '600', '0');
+INSERT INTO `oc_setting` VALUES ('590', '0', 'config', 'config_image_thumb_height', '300', '0');
+INSERT INTO `oc_setting` VALUES ('589', '0', 'config', 'config_image_thumb_width', '300', '0');
+INSERT INTO `oc_setting` VALUES ('588', '0', 'config', 'config_image_category_height', '80', '0');
+INSERT INTO `oc_setting` VALUES ('587', '0', 'config', 'config_image_category_width', '80', '0');
+INSERT INTO `oc_setting` VALUES ('586', '0', 'config', 'config_icon', 'catalog/cart.png', '0');
+INSERT INTO `oc_setting` VALUES ('585', '0', 'config', 'config_logo', 'catalog/logo.png', '0');
+INSERT INTO `oc_setting` VALUES ('584', '0', 'config', 'config_return_status_id', '2', '0');
+INSERT INTO `oc_setting` VALUES ('582', '0', 'config', 'config_affiliate_mail', '0', '0');
+INSERT INTO `oc_setting` VALUES ('583', '0', 'config', 'config_return_id', '0', '0');
+INSERT INTO `oc_setting` VALUES ('580', '0', 'config', 'config_affiliate_commission', '5', '0');
+INSERT INTO `oc_setting` VALUES ('581', '0', 'config', 'config_affiliate_id', '4', '0');
+INSERT INTO `oc_setting` VALUES ('579', '0', 'config', 'config_affiliate_auto', '0', '0');
+INSERT INTO `oc_setting` VALUES ('578', '0', 'config', 'config_affiliate_approval', '0', '0');
+INSERT INTO `oc_setting` VALUES ('567', '0', 'config', 'config_api_id', '1', '0');
+INSERT INTO `oc_setting` VALUES ('568', '0', 'config', 'config_cart_weight', '1', '0');
+INSERT INTO `oc_setting` VALUES ('569', '0', 'config', 'config_checkout_guest', '1', '0');
+INSERT INTO `oc_setting` VALUES ('570', '0', 'config', 'config_checkout_id', '5', '0');
+INSERT INTO `oc_setting` VALUES ('571', '0', 'config', 'config_order_status_id', '1', '0');
+INSERT INTO `oc_setting` VALUES ('572', '0', 'config', 'config_processing_status', 'a:1:{i:0;s:1:\"2\";}', '1');
+INSERT INTO `oc_setting` VALUES ('573', '0', 'config', 'config_complete_status', 'a:1:{i:0;s:1:\"5\";}', '1');
+INSERT INTO `oc_setting` VALUES ('574', '0', 'config', 'config_order_mail', '1', '0');
+INSERT INTO `oc_setting` VALUES ('575', '0', 'config', 'config_stock_display', '0', '0');
+INSERT INTO `oc_setting` VALUES ('576', '0', 'config', 'config_stock_warning', '0', '0');
+INSERT INTO `oc_setting` VALUES ('577', '0', 'config', 'config_stock_checkout', '0', '0');
+INSERT INTO `oc_setting` VALUES ('566', '0', 'config', 'config_invoice_prefix', 'INV-2015-00', '0');
+INSERT INTO `oc_setting` VALUES ('565', '0', 'config', 'config_account_mail', '0', '0');
+INSERT INTO `oc_setting` VALUES ('564', '0', 'config', 'config_account_id', '3', '0');
+INSERT INTO `oc_setting` VALUES ('563', '0', 'config', 'config_login_attempts', '5', '0');
+INSERT INTO `oc_setting` VALUES ('562', '0', 'config', 'config_customer_price', '0', '0');
+INSERT INTO `oc_setting` VALUES ('561', '0', 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:\"1\";}', '1');
+INSERT INTO `oc_setting` VALUES ('560', '0', 'config', 'config_customer_group_id', '1', '0');
+INSERT INTO `oc_setting` VALUES ('559', '0', 'config', 'config_customer_online', '0', '0');
+INSERT INTO `oc_setting` VALUES ('558', '0', 'config', 'config_tax_customer', 'shipping', '0');
+INSERT INTO `oc_setting` VALUES ('557', '0', 'config', 'config_tax_default', 'shipping', '0');
+INSERT INTO `oc_setting` VALUES ('556', '0', 'config', 'config_tax', '0', '0');
+INSERT INTO `oc_setting` VALUES ('555', '0', 'config', 'config_voucher_max', '1000', '0');
+INSERT INTO `oc_setting` VALUES ('554', '0', 'config', 'config_voucher_min', '1', '0');
+INSERT INTO `oc_setting` VALUES ('553', '0', 'config', 'config_review_mail', '0', '0');
+INSERT INTO `oc_setting` VALUES ('552', '0', 'config', 'config_review_guest', '1', '0');
+INSERT INTO `oc_setting` VALUES ('551', '0', 'config', 'config_review_status', '1', '0');
+INSERT INTO `oc_setting` VALUES ('550', '0', 'config', 'config_limit_admin', '20', '0');
+INSERT INTO `oc_setting` VALUES ('549', '0', 'config', 'config_product_description_length', '90', '0');
+INSERT INTO `oc_setting` VALUES ('538', '0', 'config', 'config_layout_id', '4', '0');
+INSERT INTO `oc_setting` VALUES ('539', '0', 'config', 'config_country_id', '176', '0');
+INSERT INTO `oc_setting` VALUES ('540', '0', 'config', 'config_zone_id', '', '0');
+INSERT INTO `oc_setting` VALUES ('541', '0', 'config', 'config_language', 'ru', '0');
+INSERT INTO `oc_setting` VALUES ('542', '0', 'config', 'config_admin_language', 'ru', '0');
+INSERT INTO `oc_setting` VALUES ('543', '0', 'config', 'config_currency', 'RUB', '0');
+INSERT INTO `oc_setting` VALUES ('544', '0', 'config', 'config_currency_auto', '1', '0');
+INSERT INTO `oc_setting` VALUES ('545', '0', 'config', 'config_length_class_id', '1', '0');
+INSERT INTO `oc_setting` VALUES ('546', '0', 'config', 'config_weight_class_id', '1', '0');
+INSERT INTO `oc_setting` VALUES ('547', '0', 'config', 'config_product_count', '1', '0');
+INSERT INTO `oc_setting` VALUES ('548', '0', 'config', 'config_product_limit', '15', '0');
+INSERT INTO `oc_setting` VALUES ('536', '0', 'config', 'config_meta_keyword', '', '0');
+INSERT INTO `oc_setting` VALUES ('537', '0', 'config', 'config_template', 'themesly', '0');
+INSERT INTO `oc_setting` VALUES ('535', '0', 'config', 'config_meta_description', 'Мой магазин', '0');
+INSERT INTO `oc_setting` VALUES ('531', '0', 'config', 'config_image', 'catalog/Ares_logo.png', '0');
+INSERT INTO `oc_setting` VALUES ('532', '0', 'config', 'config_open', '', '0');
+INSERT INTO `oc_setting` VALUES ('533', '0', 'config', 'config_comment', '', '0');
+INSERT INTO `oc_setting` VALUES ('534', '0', 'config', 'config_meta_title', 'Интернет магазин Opencart &quot;Русская сборка&quot;', '0');
+INSERT INTO `oc_setting` VALUES ('530', '0', 'config', 'config_fax', '495 888-88-88', '0');
+INSERT INTO `oc_setting` VALUES ('529', '0', 'config', 'config_telephone', '495 999-99-99', '0');
+INSERT INTO `oc_setting` VALUES ('528', '0', 'config', 'config_email', 'sashsem@mail.ru', '0');
+INSERT INTO `oc_setting` VALUES ('527', '0', 'config', 'config_geocode', '', '0');
+INSERT INTO `oc_setting` VALUES ('526', '0', 'config', 'config_address', 'г. Москва, ул. Ленина 10 оф. 32', '0');
+INSERT INTO `oc_setting` VALUES ('525', '0', 'config', 'config_owner', 'Иванов Иван', '0');
+INSERT INTO `oc_setting` VALUES ('524', '0', 'config', 'config_name', 'Интернет магазин Opencart &quot;Русская сборка&quot;', '0');
 
 -- ----------------------------
 -- Table structure for `oc_stock_status`
