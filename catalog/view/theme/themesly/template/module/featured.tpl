@@ -8,7 +8,7 @@
           <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
           <div class="caption">
             <a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?>
-            <p><?php echo $product['description']; ?></p></a>
+            <p><?php echo utf8_substr($product['description'],0,50); ?>..</p></a>
             <?php if ($product['rating']) { ?>
             <div class="rating">
               <?php for ($i = 1; $i <= 5; $i++) { ?>

@@ -13,7 +13,7 @@
                         <li><div class="image2"><a href="<?php echo $product['href']; ?>"><img alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" src="<?php echo $product['thumb']; ?>"></a></div>
                             <div class="inner extra-wrap">
                                 <div class="description">
-                                    <a href="<?php echo $product['href']; ?>"><?php echo $product['description']; ?></a></div>
+                                    <a href="<?php echo $product['href']; ?>"><?php echo utf8_substr($product['description'],0,50); ?>..</a></div>
                                 <div class="f-left">
                                     <div class="price">
                                         <span class="price-new"><?php echo $product['special']; ?></span><span class="price-old">Old price:&nbsp;<?php echo $product['price']; ?></span>
