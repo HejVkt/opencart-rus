@@ -10,7 +10,8 @@ Position must be relative!
 }
 
 .jcarousel-wrapper{
-    width: 200px;
+    width: 300px;
+    padding-bottom: 5px;
 }
 
 /*
@@ -35,4 +36,37 @@ have a fixed width and height (but it's not required).
 .jcarousel li {
     /* Required only for block elements like <li>'s */
     float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.jcarousel-control-prev {
+    display: block;
+
+    position:absolute;
+    width:15px;
+    height:15px;
+    left:0;
+    top:40%;
+    background:url(../image/image-caroucel-prev.png) -11px 50% no-repeat #ec1919;
+}
+
+.jcarousel-control-next {
+    display: block;
+
+    position:absolute;
+    width:15px;
+    height:15px;
+    right:0;
+    top:40%;
+    background:url(../image/image-caroucel-next.png) 6px 50% no-repeat #ec1919;
+}
+
+.jcarousel-control-prev:hover, .jcarousel-control-next:hover{
+    background-color: #3A3637;
+}
+
+.jcarousel .inactive{
+    background-color: #3A3637 !important;
 }
