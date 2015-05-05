@@ -14,16 +14,16 @@
 <script type="text/javascript" src="catalog/view/theme/themesly/javascript/jcarousel.skeleton_production.js"></script>
 
 
-<div class="container">
+<div class="container-fluid">
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
-    <?php $class = 'col-sm-6'; ?>
+    <?php $class = 'col-xs-6'; ?>
     <?php } elseif ($column_left || $column_right) { ?>
-    <?php $class = 'col-sm-9'; ?>
+    <?php $class = 'col-xs-9'; ?>
     <?php } else { ?>
-    <?php $class = 'col-sm-12'; ?>
+    <?php $class = 'col-xs-12'; ?>
     <?php } ?>
-    <div id="content" class="<?php echo $class; ?>" style="padding-right: 0px;">
+    <div id="content" class="<?php echo $class; ?>">
     <?php echo $content_top; ?>
       <div class="product-info">
 
@@ -71,13 +71,14 @@
             </div>
 
             <?php if ($column_left && $column_right) { ?>
-            <?php $class = 'col-sm-7'; ?>
+            <?php $class = 'col-xs-7'; ?>
             <?php } elseif ($column_left || $column_right) { ?>
-            <?php $class = 'col-sm-7'; ?>
+            <?php $class = 'col-xs-7'; ?>
             <?php } else { ?>
-            <?php $class = 'col-sm-5'; ?>
+            <?php $class = 'col-xs-5'; ?>
             <?php } ?>
-            <div class="<?php echo $class; ?>" style="padding-right: 0px;">
+
+            <div class="" style="padding-right: 0px;margin-left:330px;">
 
                 <h1><?php echo $heading_title; ?></h1>
 
@@ -373,20 +374,20 @@
                 <h2><?php echo $text_write; ?></h2>
                 <?php if ($review_guest) { ?>
                 <div class="form-group required">
-                    <div class="col-sm-12">
+                    <div class="col-xs-12">
                         <label class="control-label" for="input-name"><?php echo $entry_name; ?></label>
                         <input type="text" name="name" value="" id="input-name" class="form-control" />
                     </div>
                 </div>
                 <div class="form-group required">
-                    <div class="col-sm-12">
+                    <div class="col-xs-12">
                         <label class="control-label" for="input-review"><?php echo $entry_review; ?></label>
                         <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
                         <div class="help-block"><?php echo $text_note; ?></div>
                     </div>
                 </div>
                 <div class="form-group required">
-                    <div class="col-sm-12">
+                    <div class="col-xs-12">
                         <label class="control-label"><?php echo $entry_rating; ?></label>
                         &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
                         <input type="radio" name="rating" value="1" />
@@ -402,7 +403,7 @@
                 </div>
                 <?php if ($site_key) { ?>
                 <div class="form-group">
-                    <div class="col-sm-12">
+                    <div class="col-xs-12">
                         <div class="g-recaptcha" data-sitekey="<?php echo $site_key; ?>"></div>
                     </div>
                 </div>
@@ -426,11 +427,11 @@
             <?php $i = 0; ?>
             <?php foreach ($products as $product) { ?>
             <?php if ($column_left && $column_right) { ?>
-            <?php $class = 'col-lg-6 col-md-6 col-sm-12 col-xs-12'; ?>
+            <?php $class = 'col-lg-6 col-md-6 col-xs-12'; ?>
             <?php } elseif ($column_left || $column_right) { ?>
-            <?php $class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12'; ?>
+            <?php $class = 'col-lg-4 col-md-4 col-xs-6'; ?>
             <?php } else { ?>
-            <?php $class = 'col-lg-3 col-md-3 col-sm-6 col-xs-12'; ?>
+            <?php $class = 'col-lg-3 col-md-3 col-xs-6'; ?>
             <?php } ?>
             <div class="<?php echo $class; ?>">
               <div class="product-thumb transition">
@@ -463,7 +464,7 @@
                   <?php } ?>
                 </div>
                 <div class="button-group">
-                  <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
+                  <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><span class=""><?php echo $button_cart; ?></span> <i class="fa fa-shopping-cart"></i></button>
                   <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
                   <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
                 </div>

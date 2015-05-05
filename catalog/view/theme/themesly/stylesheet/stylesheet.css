@@ -470,6 +470,15 @@ div.required .control-label:before {
 .btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
 	background-color: #535355;
 }
+
+.btn {
+    text-transform: uppercase;
+}
+
+#cart > .btn {
+    text-transform: none;
+}
+
 /* list group */
 .list-group a {
 	border: 1px solid #DDDDDD;
@@ -1573,7 +1582,7 @@ h2 {
     font-family: 'Cuprum', sans-serif;
     text-transform:uppercase;
     width:auto;
-    margin-right:13px;
+
 }
 
 .breadcrumb a {
@@ -2615,7 +2624,7 @@ ul {
     margin-bottom: 20px;
 
 }
-.category-info .image {
+.category-info .img-thumbnail {
     float: left;
     padding: 5px;
     margin-right: 15px;
@@ -2642,6 +2651,13 @@ ul {
     list-style:none;
     padding:0;
 }
+
+.row .category-img{
+    padding-right: 0px;
+    margin-right:0px;
+    width: auto;
+}
+
 .capcha {
     width:143px;
 }
@@ -5194,4 +5210,23 @@ a.list-group-item:hover{
 
 #search .btn:hover{
     background: #FF0000;
+}
+
+.breadcrumb{
+    padding-left: 2px;
+}
+
+.container{
+    min-width: 1064px !important;
+}
+
+.container-fluid{
+    min-width: 1064px !important;
+}
+
+/*******Category page *********************************/
+#content.category h2{
+    font-size: 20px;
+    color: #535355;
+    text-transform: uppercase;
 }
