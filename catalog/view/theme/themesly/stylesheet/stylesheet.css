@@ -330,6 +330,11 @@ div.required .control-label:before {
 	padding: 8px 14px 8px 14px;
 }
 
+.cart .alert{
+    margin-top: 10px;
+}
+
+
 .pagination {
 	margin: 0;
 }
