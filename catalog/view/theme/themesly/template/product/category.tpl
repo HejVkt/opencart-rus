@@ -31,69 +31,71 @@
       </div>
       <?php } ?>
       <?php if ($categories) { ?>
-      <div class="box-heading"><h2><?php echo $text_refine; ?></h2></div>
-      <?php if (count($categories) <= 5) { ?>
-      <div class="row">
-        <div class="col-xs-3">
-          <ul>
-            <?php foreach ($categories as $category) { ?>
-            <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-            <?php } ?>
-          </ul>
+
+        <div class="box">
+            <div class="box-heading"><?php echo $text_refine; ?></div>
+            <div class="box-content">
+
+                <div class="box-product box-subcat">
+                    <ul>
+                        <?php $i=0; foreach ($categories as $category) { $i++; ?>
+                            <li class="cat-height <?php ($i % 3 == 0) ? "first-in-line" : ""; ?>">
+                                <div class="image"><a href="<?php echo $category['href']; ?>">
+                                    <?php if ($category['thumb']) : ?>
+                                        <img src="<?php echo $category['thumb'];?>" alt="<?php echo $category['name']; ?>" title="<?php echo $category['name']; ?>" />
+                                    <?else:?>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" alt="<?php echo $category['name']; ?>" title="<?php echo $category['name']; ?>" width="80" height="80" />
+                                    <?endif?>
+                                    </a>
+                                </div>
+                                <div class="name subcatname"><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></div>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-      <?php } else { ?>
-      <div class="row">
-        <?php foreach (array_chunk($categories, ceil(count($categories) / 4)) as $categories) { ?>
-        <div class="col-xs-3">
-          <ul>
-            <?php foreach ($categories as $category) { ?>
-            <li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
-            <?php } ?>
-          </ul>
-        </div>
-        <?php } ?>
-      </div>
+        <br/>
       <?php } ?>
-      <?php } ?>
+
       <?php if ($products) { ?>
-      <p><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></p>
-      <div class="row">
-        <div class="col-xs-4">
-          <div class="btn-group hidden-xs">
-            <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"><i class="fa fa-th-list"></i></button>
-            <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"><i class="fa fa-th"></i></button>
-          </div>
+
+        <div class="btn-group">
+
+            <div class="product-filter">
+                <div class="display"><b>Отображеать:</b>
+                    <button type="button" id="list-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_list; ?>"></button>
+                    <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_grid; ?>"></button>
+                </div>
+                <div class="sort"><?php echo $text_sort; ?>
+
+                    <select id="input-sort"  onchange="location = this.value;">
+                        <?php foreach ($sorts as $sorts) { ?>
+                        <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
+                        <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
+                        <?php } else { ?>
+                        <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
+                        <?php } ?>
+                        <?php } ?>
+                    </select>
+
+                </div>
+                <div class="limit"><?php echo $text_limit; ?>
+
+                    <select id="input-limit" onchange="location = this.value;">
+                        <?php foreach ($limits as $limits) { ?>
+                        <?php if ($limits['value'] == $limit) { ?>
+                        <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
+                        <?php } else { ?>
+                        <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
+                        <?php } ?>
+                        <?php } ?>
+                    </select>
+
+                </div>
+                <div class="product-compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div>
+            </div>
         </div>
-        <div class="col-xs-2 text-right">
-          <label class="control-label" for="input-sort"><?php echo $text_sort; ?></label>
-        </div>
-        <div class="col-xs-3 text-right">
-          <select id="input-sort" class="form-control" onchange="location = this.value;">
-            <?php foreach ($sorts as $sorts) { ?>
-            <?php if ($sorts['value'] == $sort . '-' . $order) { ?>
-            <option value="<?php echo $sorts['href']; ?>" selected="selected"><?php echo $sorts['text']; ?></option>
-            <?php } else { ?>
-            <option value="<?php echo $sorts['href']; ?>"><?php echo $sorts['text']; ?></option>
-            <?php } ?>
-            <?php } ?>
-          </select>
-        </div>
-        <div class="col-xs-1 text-right">
-          <label class="control-label" for="input-limit"><?php echo $text_limit; ?></label>
-        </div>
-        <div class="col-xs-2 text-right">
-          <select id="input-limit" class="form-control" onchange="location = this.value;">
-            <?php foreach ($limits as $limits) { ?>
-            <?php if ($limits['value'] == $limit) { ?>
-            <option value="<?php echo $limits['href']; ?>" selected="selected"><?php echo $limits['text']; ?></option>
-            <?php } else { ?>
-            <option value="<?php echo $limits['href']; ?>"><?php echo $limits['text']; ?></option>
-            <?php } ?>
-            <?php } ?>
-          </select>
-        </div>
-      </div>
       <br />
       <div class="row">
         <?php foreach ($products as $product) { ?>

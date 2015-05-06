@@ -108,8 +108,11 @@ $(document).ready(function() {
 
 		//$('#content .product-layout').attr('class', 'product-layout product-list col-xs-12');
 		$('#content .row > .product-layout').attr('class', 'product-layout product-list col-xs-12');
-		
-		localStorage.setItem('display', 'list');
+
+        $('#list-view').addClass('active');
+        $('#grid-view').removeClass('active');
+
+        localStorage.setItem('display', 'list');
 	});
 
 	// Product Grid
@@ -127,6 +130,8 @@ $(document).ready(function() {
 			$('#content .product-layout').attr('class', 'product-layout product-grid col-lg-3 col-md-3 col-sm-6 col-xs-12');
 		}
 
+        $('#grid-view').addClass('active');
+        $('#list-view').removeClass('active');
 		 localStorage.setItem('display', 'grid');
 	});
 

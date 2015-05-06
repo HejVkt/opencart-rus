@@ -161,7 +161,9 @@ class ControllerProductCategory extends Controller {
 
 				$data['categories'][] = array(
 					'name'  => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+					'href'  => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url),
+                    'thumb'  => $this->model_tool_image->resize($result['image'], 80, 80),
+
 				);
 			}
 

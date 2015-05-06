@@ -1742,10 +1742,13 @@ table.list .center {
     padding: 7px;
 }
 .pagination {
-    display: inline-block;
-    width: 100%;
-    padding:10px 0px
+    color: #252525;
 }
+
+.row .text-left, .row .text-right{
+    color: #252525;
+}
+
 .account-order .button-order-right {
     float:right;
     margin-top:-3px;
@@ -2045,9 +2048,10 @@ a.button span {
 
 
 #content .box.featured {width:650px;float:left; margin-right:17px}
+
 .box {
-    margin-bottom:20px;
 }
+
 .box .box-content.inform {
     padding:0px 0 0;
 }
@@ -2073,6 +2077,7 @@ a.button span {
 .box .box-content {
     overflow:hidden;
 }
+
 .box-shining {
     padding: 20px 0px 42px 30px;
     background:url(../image/box-shining.jpg) no-repeat;
@@ -2233,6 +2238,7 @@ a.button span {
 }
 .box-product.box-subcat .name.subcatname a {
     margin-bottom:0;
+    font-size:14px;
 }
 .box-product.box-subcat li {
     width:234px;
@@ -2943,7 +2949,6 @@ ul {
 .product-list .compare a {
 }
 .product-grid {
-    padding:20px 0px 1px 0px;
     overflow:hidden;
 }
 .product-list {
@@ -5216,17 +5221,94 @@ a.list-group-item:hover{
     padding-left: 2px;
 }
 
-.container{
-    min-width: 1064px !important;
-}
-
-.container-fluid{
-    min-width: 1064px !important;
-}
-
 /*******Category page *********************************/
 #content.category h2{
     font-size: 20px;
     color: #535355;
     text-transform: uppercase;
+    font-weight: bold;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.container{
+    min-width: 1064px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.container-fluid{
+    min-width: 1064px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 15px;
+}
+
+.btn-group {
+    display: block;
+}
+
+.btn-group .product-filter #list-view{
+    background: url("../image/list_a.png") no-repeat scroll 0 bottom transparent;
+    display: inline-block;
+    height: 24px;
+    margin-left: 8px;
+    margin-right: 5px;
+    width: 25px;
+    float: left;
+    border: 0px;
+}
+
+.btn-group .product-filter #grid-view{
+    background: url("../image/grid_a.png") no-repeat scroll 0 bottom transparent;
+    display: inline-block;
+    height: 24px;
+    text-indent: -9999px;
+    width: 25px;
+    float: left;
+    border: 0px;
+}
+
+.btn-group .product-filter #list-view.active,
+.btn-group .product-filter #grid-view.active{
+    background-position: top;
+}
+
+.btn-group < .product-filter{
+    margin:0px;
+}
+
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-radius: 0px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    z-index: 2;
+    color: #000000;
+    cursor: default;
+    background-color: #f7f7f7;
+    border-color: #e4e4e4;
+    font-size: 10px;
+}
+
+.pagination>li>a, .pagination>li>span {
+    font-size: 10px;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #000000;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+}
+
+.pagination>li:last-child>a, .pagination>li:last-child>span {
+    border-radius: 0px;
 }
