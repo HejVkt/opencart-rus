@@ -110,24 +110,24 @@
                             <span class="text-price">Цена:</span>
                             <?php if ($special) : ?>
                                 <span class="price-new"><?php echo $special;?></span>
-                                <span class="price-old"><?php echo $price; ?></span>
+                                <span class="price-old"><?php echo $price; ?></span><br/>
                             <?else:?>
-                                <span class="price"><?php echo $price; ?></span>
+                                <span class="price"><?php echo $price; ?></span><br/>
                             <?endif?>
 
                             <?php if ($tax) { ?>
-                                <span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span>
+                                <span class="price-tax"><?php echo $text_tax; ?> <?php echo $tax; ?></span><br/>
                             <?php } ?>
 
                         <?endif?>
 
                         <?php if ($points) { ?>
-                            <span><?php echo $text_points; ?> <?php echo $points; ?></span>
+                            <span><?php echo $text_points; ?> <?php echo $points; ?></span><br/>
                         <?php } ?>
 
                         <?php if ($discounts) { ?>
                             <?php foreach ($discounts as $discount) { ?>
-                                <span><?php echo $discount['quantity']; ?><?php echo $text_discount; ?><?php echo $discount['price']; ?></span>
+                                <span><?php echo $discount['quantity']; ?><?php echo $text_discount; ?><?php echo $discount['price']; ?></span><br/>
                             <?php } ?>
                         <?php } ?>
 
