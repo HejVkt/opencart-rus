@@ -387,7 +387,7 @@
                     </div>
                 </div>
                 <div class="form-group required">
-                    <div class="col-xs-12">
+                    <div class="col-xs-12 review-rating">
                         <label class="control-label"><?php echo $entry_rating; ?></label>
                         &nbsp;&nbsp;&nbsp; <?php echo $entry_bad; ?>&nbsp;
                         <input type="radio" name="rating" value="1" />

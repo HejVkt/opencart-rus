@@ -5317,3 +5317,7 @@ a.list-group-item:hover{
 .pagination>li:last-child>a, .pagination>li:last-child>span {
     border-radius: 0px;
 }
+
+.review-rating {
+	color: #737373;
+}
