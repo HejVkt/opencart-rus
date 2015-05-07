@@ -112,6 +112,8 @@ $(document).ready(function() {
         $('#list-view').addClass('active');
         $('#grid-view').removeClass('active');
 
+        $('#product-view').attr('class', 'product-list');
+
         localStorage.setItem('display', 'list');
 	});
 
@@ -132,6 +134,9 @@ $(document).ready(function() {
 
         $('#grid-view').addClass('active');
         $('#list-view').removeClass('active');
+
+        $('#product-view').attr('class', 'product-grid');
+
 		 localStorage.setItem('display', 'grid');
 	});
 

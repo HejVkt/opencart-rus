@@ -395,6 +395,7 @@ div.required .control-label:before {
     background-repeat: repeat-x;
     transition: all 0.3s ease-in-out 0s;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .btn-primary:visited {
@@ -1427,7 +1428,7 @@ h2 {
 }
 
 .price {
-    font-size:16px;
+    font-size:17px;
     line-height:normal;
     color:#535355;
     font-weight:bold;
@@ -3003,13 +3004,35 @@ ul {
     background: url(../image/iconimage.png) no-repeat -29px -24px;
 }
 .addtocompare, div.compare > button {
-    background: url(../image/iconimage.png) no-repeat -29px 0px;
+    background: url(../image/iconimage.png) no-repeat top left;
     float: left;
     height:24px;
     overflow: hidden;
     text-indent: -9999px;
     width:25px;
+    border: 0px;
+    margin: 0px 3px;
 }
+
+.addtocompare, div.wishlist > button {
+    background: url(../image/iconimage.png) no-repeat top right;
+    float: left;
+    height:24px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width:25px;
+    border: 0px;
+    margin: 0px 3px;
+}
+
+.addtocompare, div.compare > button:hover {
+    background: url(../image/iconimage.png) no-repeat bottom left;
+}
+
+.addtocompare, div.wishlist > button:hover {
+    background: url(../image/iconimage.png) no-repeat bottom right;
+}
+
 #column-left + #column-right + #content .product-grid > div {
     width: 125px;
 }
@@ -5316,6 +5339,19 @@ a.list-group-item:hover{
 
 .pagination>li:last-child>a, .pagination>li:last-child>span {
     border-radius: 0px;
+}
+
+.caption h4 a{
+    font-family: 'Cuprum';
+
+    color: #ec1919;
+    line-height: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.product-grid .price{
+    padding-bottom: 10px;
 }
 
 .review-rating {

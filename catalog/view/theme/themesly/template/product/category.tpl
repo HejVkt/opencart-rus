@@ -98,47 +98,59 @@
         </div>
       <br />
       <div class="row">
-        <?php foreach ($products as $product) { ?>
-        <div class="product-layout product-list col-xs-12">
-          <div class="product-thumb">
-            <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
-            <div>
-              <div class="caption">
-                <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-                <p><?php echo $product['description']; ?></p>
-                <?php if ($product['rating']) { ?>
-                <div class="rating">
-                  <?php for ($i = 1; $i <= 5; $i++) { ?>
-                  <?php if ($product['rating'] < $i) { ?>
-                  <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
-                  <?php } else { ?>
-                  <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
-                  <?php } ?>
-                  <?php } ?>
-                </div>
-                <?php } ?>
-                <?php if ($product['price']) { ?>
-                <p class="price">
-                  <?php if (!$product['special']) { ?>
-                  <?php echo $product['price']; ?>
-                  <?php } else { ?>
-                  <span class="price-new"><?php echo $product['special']; ?></span> <span class="price-old"><?php echo $product['price']; ?></span>
-                  <?php } ?>
-                  <?php if ($product['tax']) { ?>
-                  <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-                  <?php } ?>
-                </p>
-                <?php } ?>
-              </div>
-              <div class="button-group">
-                <button type="button" onclick="cart.add('<?php echo $product['product_id']; ?>', '<?php echo $product['minimum']; ?>');"><i class="fa fa-shopping-cart"></i> <span class="hidden-xs hidden-sm hidden-md"><?php echo $button_cart; ?></span></button>
-                <button type="button" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
-                <button type="button" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
-              </div>
-            </div>
+          <div class="product-grid" id="product-view">
+              <ul>
+                  <?php $pNum=0; foreach ($products as $product) :
+                    $pNum++;
+                    if($pNum == 4){
+                        $pNum = 1;
+                    }
+                  ?>
+                  <li class="<?php echo ($pNum == 1) ? "first-in-line" : "" ?> <?php echo ($pNum == 3) ? "last-in-line" : "" ?>">
+
+                  <div class="left" style="float: left;">
+                      <div class="image"><a href="<?php echo $product['href']; ?>"><img alt="<?php echo $product['name']; ?>" id="img_45" src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>"></a></div>
+                      <div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+                      <div class="description"><?php echo $product['description']; ?></div>
+                  </div>
+
+                      <div class="right">
+                          <div class="price">
+                              <?php if ($product['special']) : ?>
+                                  <span class="price-new"><?php echo $product['special']; ?></span>
+                                  <span class="price-old"><?php echo $product['price']; ?></span>
+                              <?php else:?>
+                                  <span class="price"><?php echo $product['price']; ?></span>
+                              <?php endif?>
+                              <span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
+                          </div>
+                              <?php if ($product['rating'] and 1==2) { ?>
+                                  <div class="rating">
+                                      <?php for ($i = 1; $i <= 5; $i++) { ?>
+                                      <?php if ($product['rating'] < $i) { ?>
+                                      <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                      <?php } else { ?>
+                                      <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+                                      <?php } ?>
+                                      <?php } ?>
+                                  </div>
+                              <?php } ?>
+
+                          <div class="cart">
+                              <a data-id="<?php echo $product['product_id']; ?>" onclick="cart.add('<?php echo $product['product_id']; ?>');" class="button addToCart"><span>Купить</span><strong style="overflow: hidden; width: 0px; left: 50%; top: 50%; height: 0px;"></strong></a>
+                          </div>
+                          <div class="wishlist">
+                              <button type="button" class="btn btn-default heart" data-toggle="tooltip" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-heart"></i></button>
+                          </div>
+                          <div class="compare">
+                              <button type="button" class="btn btn-default" data-toggle="tooltip" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product['product_id']; ?>');"><i class="fa fa-exchange"></i></button>
+                          </div>
+                      </div>
+
+                  </li>
+                  <?php endforeach?>
+              </ul>
           </div>
-        </div>
-        <?php } ?>
       </div>
       <div class="row">
         <div class="col-xs-6 text-left"><?php echo $pagination; ?></div>
