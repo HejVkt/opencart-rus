@@ -44,10 +44,15 @@
 	transition: all 0.3s ease-in-out;
     font-weight: bold;
 }
+
+#menu > ul > li > ul > li a{
+
+}
+
 #menu > ul > li > a:hover, #menu > ul > li.sfHover > a, #menu > ul > li.active > a   {
 	color:#fff; 
 	background:#ff0000;
-	}
+}
 #menu > ul > li  ul {
 	display: none;
 	position: absolute; 
@@ -55,7 +60,7 @@
 	background:#535355; 
 	left:0px;
 	top:37px;
-	width:164px;
+    max-width: 200px;
 	margin:0 !important;
 }
 #menu > ul > li:hover > div {

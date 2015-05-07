@@ -199,7 +199,7 @@
                 <?php if ($option['type'] == 'select') { ?>
                 <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
                   <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
-                  <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control">
+                  <select name="option[<?php echo $option['product_option_id']; ?>]" id="input-option<?php echo $option['product_option_id']; ?>" class="">
                     <option value=""><?php echo $text_select; ?></option>
                     <?php foreach ($option['product_option_value'] as $option_value) { ?>
                     <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
@@ -268,13 +268,13 @@
                 <?php if ($option['type'] == 'text') { ?>
                 <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
                   <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
-                  <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" placeholder="<?php echo $option['name']; ?>" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control" />
+                  <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" placeholder="<?php echo $option['name']; ?>" id="input-option<?php echo $option['product_option_id']; ?>" class="" />
                 </div>
                 <?php } ?>
-                <?php if ($option['type'] == 'textarea') { ?>
+                <?php if ($option['type'] == '') { ?>
                 <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
                   <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
-                  <textarea name="option[<?php echo $option['product_option_id']; ?>]" rows="5" placeholder="<?php echo $option['name']; ?>" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control"><?php echo $option['value']; ?></textarea>
+                  <textarea name="option[<?php echo $option['product_option_id']; ?>]" rows="5" placeholder="<?php echo $option['name']; ?>" id="input-option<?php echo $option['product_option_id']; ?>" class=""><?php echo $option['value']; ?></textarea>
                 </div>
                 <?php } ?>
                 <?php if ($option['type'] == 'file') { ?>
@@ -288,7 +288,7 @@
                 <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
                   <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
                   <div class="input-group date">
-                    <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" data-date-format="YYYY-MM-DD" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control" />
+                    <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" data-date-format="YYYY-MM-DD" id="input-option<?php echo $option['product_option_id']; ?>" class="" />
                     <span class="input-group-btn">
                     <button class="btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
                     </span></div>
@@ -298,7 +298,7 @@
                 <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
                   <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
                   <div class="input-group datetime">
-                    <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" data-date-format="YYYY-MM-DD HH:mm" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control" />
+                    <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" data-date-format="YYYY-MM-DD HH:mm" id="input-option<?php echo $option['product_option_id']; ?>" class="" />
                     <span class="input-group-btn">
                     <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
                     </span></div>
@@ -308,7 +308,7 @@
                 <div class="form-group<?php echo ($option['required'] ? ' required' : ''); ?>">
                   <label class="control-label" for="input-option<?php echo $option['product_option_id']; ?>"><?php echo $option['name']; ?></label>
                   <div class="input-group time">
-                    <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" data-date-format="HH:mm" id="input-option<?php echo $option['product_option_id']; ?>" class="form-control" />
+                    <input type="text" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option['value']; ?>" data-date-format="HH:mm" id="input-option<?php echo $option['product_option_id']; ?>" class="" />
                     <span class="input-group-btn">
                     <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i></button>
                     </span></div>

@@ -2,6 +2,7 @@
 
 h1, h2, h3, h4, h5, h6 {
 	color: #444;
+    font-family: 'Cuprum', sans-serif;
 }
 
 a:hover {
@@ -23,13 +24,17 @@ h3 {
 	font-size: 21px;
 }
 h4 {
-	font-size: 15px;
+	font-size: 19px;
 }
 h5 {
-	font-size: 12px;
+	font-size: 18px;
 }
 h6 {
-	font-size: 10.2px;
+	font-size: 13.2px;
+}
+
+h4 > a {
+    font-size: 14px;
 }
 
 legend {
@@ -380,11 +385,16 @@ div.required .control-label:before {
 	background-repeat: repeat-x;
     transition: all 0.3s ease-in-out 0s;
     text-decoration: none;
+
+    color: #C4C4C4;
+    background-color: #ffffff;
+    border: 1px solid #E2E2E2;
 }
+
 
 .btn-default:visited {
     color: white;
-
+    color: #C4C4C4;
 }
 
 .btn-primary {
@@ -1123,7 +1133,7 @@ h2 {
     -ms-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     right:0px;
-
+    margin-top: 5px;
 }
 #header #cart.active .content {
     display: block;
@@ -5221,6 +5231,14 @@ a.list-group-item:hover{
     font-size: 15px;
 }
 
+.fa-shopping-cart:before{
+    content: 'Корзина: ';
+    font-family: 'Cuprum';
+    font-weight: bold;
+}
+
+
+
 #search .btn{
     background: #535355;
     width: 80px;
@@ -5241,12 +5259,26 @@ a.list-group-item:hover{
     border: 0px;
 }
 
+#search .input-group{
+    width: 100%;
+}
+
 #search .btn:hover{
     background: #FF0000;
 }
 
 .breadcrumb{
     padding-left: 2px;
+}
+
+.container > .breadcrumb{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.input-group input{
+    height: 100%;
+    height: 34px;
 }
 
 /*******Category page *********************************/
@@ -5356,4 +5388,16 @@ a.list-group-item:hover{
 
 .review-rating {
 	color: #737373;
+}
+
+.fa-calendar < .btn-default {
+    background: green;
+}
+
+.btn-block {
+    width: auto;
+}
+
+.product-info .input-group{
+    width: 60px;
 }
