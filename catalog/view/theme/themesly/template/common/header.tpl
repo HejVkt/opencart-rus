@@ -85,7 +85,9 @@
 
                     <div class="clear"></div>
                     <div class="cart-position">
+                        <div id="cart" class="btn-group btn-block">
                             <?php echo $cart; ?>
+                        </div>
                     </div>
 
                     <div id="welcome">

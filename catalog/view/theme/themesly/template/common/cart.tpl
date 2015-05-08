@@ -1,6 +1,6 @@
-<div id="cart" class="btn-group btn-block">
   <button type="button" data-toggle="dropdown" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-inverse btn-block btn-lg dropdown-toggle"><b>Корзина</b> :&nbsp;<span id="cart-total"><?php echo $text_items; ?></span></button>
-  <div class="content">
+  <div id="cart_content" class="content">
+      <span id="span_cart_content">
       <?php if ($products) : ?>
       <span class="latest-added">Последние добавленные товары:</span>
       <div class="mini-cart-info">
@@ -38,7 +38,5 @@
       <?else:?>
           <p class="text-center"><?php echo $text_empty; ?></p>
       <?endif?>
-
+      </span>
   </div>
-
-</div>

@@ -747,6 +747,12 @@ body {
     font-size:12px;
     line-height:17px;
     min-width:1124px;
+
+    background: url("../image/bg_.jpg") no-repeat scroll center top red;
+
+    background: url("../image/bg.jpg") no-repeat scroll center top #eeeeee;
+
+
 }
 
 td, th, input, textarea, select, a {

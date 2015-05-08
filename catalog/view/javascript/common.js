@@ -237,7 +237,7 @@ var cart = {
 				
 					$('html, body').animate({ scrollTop: 0 }, 'slow');
 
-					$('#cart > div.content').load('index.php?route=common/cart/info div.content');
+					$('#cart_content').load('index.php?route=common/cart/info #span_cart_content');
 				}
 			}
 		});
@@ -263,7 +263,7 @@ var cart = {
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
 					location = 'index.php?route=checkout/cart';
 				} else {
-                    $('#cart > div.content').load('index.php?route=common/cart/info div.content');
+                    $('#cart_content').load('index.php?route=common/cart/info #span_cart_content');
 				}
 			}
 		});
@@ -289,8 +289,8 @@ var cart = {
 				if (getURLVar('route') == 'checkout/cart' || getURLVar('route') == 'checkout/checkout') {
 					location = 'index.php?route=checkout/cart';
 				} else {
-                    $('#cart > div.content').load('index.php?route=common/cart/info div.content');
-				}
+                    $('#cart_content').load('index.php?route=common/cart/info #span_cart_content');
+                }
 			}
 		});
 	}
