@@ -348,6 +348,7 @@ div.required .control-label:before {
 	margin: 1em 0;
 }
 .btn {
+
 	padding: 7.5px 12px;
 	font-size: 12px;
 	border: 1px solid #cccccc;
@@ -378,9 +379,8 @@ div.required .control-label:before {
 }
 
 .btn-default {
-	color: white;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-	background-repeat: repeat-x;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    background-repeat: repeat-x;
     transition: all 0.3s ease-in-out 0s;
     text-decoration: none;
 
@@ -388,6 +388,7 @@ div.required .control-label:before {
     background-color: #ffffff;
     border: 1px solid #E2E2E2;
 }
+
 
 
 .btn-default:visited {
