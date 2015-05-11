@@ -348,6 +348,9 @@ div.required .control-label:before {
 	margin: 1em 0;
 }
 .btn {
+    background-color: #ff0000;
+    border-color: #ff0000;
+
 	padding: 7.5px 12px;
 	font-size: 12px;
 	border: 1px solid #cccccc;
@@ -380,8 +383,6 @@ div.required .control-label:before {
 .btn-default {
 	color: white;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    background-color: #ff0000;
-    border-color: #ff0000;
 	background-repeat: repeat-x;
     transition: all 0.3s ease-in-out 0s;
     text-decoration: none;
@@ -412,10 +413,19 @@ div.required .control-label:before {
     color: #ffffff;
 }
 
-.btn-default:hover, .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+.btn-default:hover, .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary.disabled.active {
     background-color: #535355;
     border-color: #535355;
     color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active{
+    background-color: #535355;
+    border-color: #535355;
 }
 
 .btn-warning {
