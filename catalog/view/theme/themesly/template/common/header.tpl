@@ -93,13 +93,7 @@
                     <div id="welcome">
 
                         <?php if ($logged) { ?>
-                        <ul>
-                            <li><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
-                            <li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
-                            <li><a href="<?php echo $transaction; ?>"><?php echo $text_transaction; ?></a></li>
-                            <li><a href="<?php echo $download; ?>"><?php echo $text_download; ?></a></li>
-                            <li><a href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
-                        </ul>>
+                            <?php echo $text_logged; ?>
                         <?php } else { ?>
                             Приветствуем посетитель, Вы можете  <a style="color: rgb(255, 0, 0);" href="<?php echo $login; ?>">Войти</a> или <a style="color: rgb(255, 0, 0);" href="<?php echo $register; ?>">Зарегистрироваться</a>
                         <?php } ?>

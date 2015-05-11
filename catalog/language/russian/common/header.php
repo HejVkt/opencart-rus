@@ -14,3 +14,4 @@ $_['text_logout']        = 'Выход';
 $_['text_checkout']      = 'Оформление заказа';
 $_['text_search']        = 'Поиск';
 $_['text_all']           = 'Смотреть Все';
+$_['text_logged']        = 'Вы вошли как <a href="%s">%s</a> ( <a href="%s">Выход</a> )';
