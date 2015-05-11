@@ -348,9 +348,6 @@ div.required .control-label:before {
 	margin: 1em 0;
 }
 .btn {
-    background-color: #ff0000;
-    border-color: #ff0000;
-
 	padding: 7.5px 12px;
 	font-size: 12px;
 	border: 1px solid #cccccc;
