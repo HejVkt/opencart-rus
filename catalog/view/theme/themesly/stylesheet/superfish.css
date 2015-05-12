@@ -51,13 +51,13 @@
 
 #menu > ul > li > a:hover, #menu > ul > li.sfHover > a, #menu > ul > li.active > a   {
 	color:#fff; 
-	background:#ff0000;
+	background:#7A0000;
 }
 #menu > ul > li  ul {
 	display: none;
 	position: absolute; 
 	z-index: 99;
-	background:#535355; 
+	background:#0A0A0C;
 	left:0px;
 	top:37px;
     max-width: 200px;
