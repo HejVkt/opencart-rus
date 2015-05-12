@@ -43,11 +43,11 @@ have a fixed width and height (but it's not required).
 }
 
 .jcarousel-control-prev:hover{
-    color: #ec1919;
+	color:#7A0000;
 }
 
 .jcarousel-control-next:hover{
-    color: #ec1919;
+	color:#7A0000;
 }
 
 

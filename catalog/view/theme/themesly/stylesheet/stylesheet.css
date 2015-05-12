@@ -1,7 +1,7 @@
 @import "fonts.css";
 
 h1, h2, h3, h4, h5, h6 {
-	color: #444;
+	color: 	#383737;
     font-family: 'Cuprum', sans-serif;
 }
 
@@ -40,7 +40,7 @@ h4 > a {
 legend {
 	font-size: 18px;
 	padding: 7px 0px;
-    color: #7D7C7C;
+    color: #000000;
 
     border: 0px;
 
@@ -93,7 +93,7 @@ span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
 
 div.required .control-label:before {
 	content: '* ';
-	color: #F00;
+	color: #7A0000;
 	font-weight: bold;
 }
 /* Gradent to all drop down menus */
@@ -399,8 +399,8 @@ div.required .control-label:before {
 .btn-primary {
 	color: #ffffff;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    background-color: #ff0000;
-    border-color: #ff0000;
+    background-color: #7A0000;
+    border-color: #7A0000;
     background-repeat: repeat-x;
     transition: all 0.3s ease-in-out 0s;
     text-decoration: none;
@@ -412,8 +412,8 @@ div.required .control-label:before {
 }
 
 .btn-default:hover, .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary.disabled.active {
-    background-color: #535355;
-    border-color: #535355;
+    background-color: #0A0A0C;
+    border-color: #0A0A0C;
     color: white;
 }
 
@@ -422,8 +422,8 @@ div.required .control-label:before {
 .btn-primary.focus,
 .btn-primary:active,
 .btn-primary.active{
-    background-color: #535355;
-    border-color: #535355;
+    background-color: #0A0A0C;
+    border-color: #0A0A0C;
 }
 
 .btn-warning {
@@ -485,14 +485,14 @@ div.required .control-label:before {
 .btn-inverse {
 	color: #ffffff;
 	text-shadow: 0;
-	background-color: #ff0000;
-	border-color: #ff0000;
+	background-color: #7A0000;
+	border-color: #7A0000;
     border: 0px;
     transition: all 0.3s ease-in-out 0s;
 }
 
 .btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, .btn-inverse.disabled, .btn-inverse[disabled] {
-	background-color: #535355;
+	background-color: #0A0A0C;
 }
 
 .btn {
@@ -745,7 +745,7 @@ html, body {
 }
 
 body {
-    color: #7d7c7c;
+    color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
@@ -755,8 +755,6 @@ body {
     font-size:12px;
     line-height:17px;
     min-width:1124px;
-
-    background: url("../image/bg_.jpg") no-repeat scroll center top red;
 
     background: url("../image/bg.jpg") no-repeat scroll center top #eeeeee;
 
@@ -771,7 +769,7 @@ p {
     margin-bottom: 20px;
 }
 a, a:visited, a {
-    color: #7d7c7c;
+    color: #000000;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -886,10 +884,11 @@ table.list, .checkout-product td, table.list td, .wishlist-product td, .product-
 .font-1 {
     font-weight:bold;
     font-size:60px;
-    color:#f00808;
+    color:#7A0000;
     text-transform:uppercase;
     line-height:normal;
     margin-bottom:15px;
+
 }
 .font-1 span {
     font-size:15px;
@@ -1043,7 +1042,7 @@ h2 {
 }
 /************************************************************************************currency******************************************************/
 #currency {
-    color: #535355;
+    color: #0A0A0C;
     line-height: 12px;
     font-size:18px;
     font-family: 'Cuprum', sans-serif;
@@ -1065,18 +1064,18 @@ h2 {
 	display: inline-block;
     text-decoration: none;
     text-align:center;
-    color:#535355;
+    color:#0A0A0C;
 
     font-family: 'Cuprum', sans-serif;
     line-height:26px;
 }
 #currency a:hover span {
-    color:#ff0000;
+    color:#7A0000;
 }
 #currency a .act {
     text-decoration: none;
     cursor:default;
-    color:#ff0000 !important
+    color:#7A0000 !important
 }
 /*****************************************************************************************************************************************/
 /*********************************************************************************************header-cart*******************************************************************************************/
@@ -1128,7 +1127,7 @@ h2 {
     padding:8px 10px;
 }
 #header #cart .content a.button:hover {
-    background:#535355
+    background:#0A0A0C
 }
 #header #cart .content {
     clear: both;
@@ -1216,13 +1215,13 @@ h2 {
     font-family:Arial, Helvetica, sans-serif;
     font-size:11px;
     font-weight:bold;
-    color:#a6a4a4;
+    color:#737171;
     text-transform:uppercase;
 }
 #header #cart .cart td.total {
     font-size:12px;
     font-weight:600;
-    color:#c81908;
+    color:#7A0000;
     text-align: right;
 }
 .cart-module .remove img:hover {
@@ -1279,7 +1278,7 @@ h2 {
     padding:0px 10px 0px 10px;
 }
 #header #cart table.total td b {
-    color:#a6a4a4;
+    color:#737171;
     font-size:11px;
     font-weight:bold;
 }
@@ -1308,7 +1307,7 @@ h2 {
 /****************************************************************************************************************************************************************************************/
 #button-register {margin-top:10px}
 #header #welcome a {
-    color:#ff0000;
+    color:#7A0000;
     text-decoration:none;
 }
 #header #welcome a {position:relative; overflow:hidden;}
@@ -1319,7 +1318,7 @@ h2 {
     width:0px;
     position:absolute;
     left:50%;
-    background:#ff0000;
+    background:#7A0000;
 }
 
 #header #welcome a + a {
@@ -1331,7 +1330,7 @@ h2 {
 }
 #header #welcome {
     float:right;
-    color:#7d7c7c;
+    color:#000000;
     margin-top:28px;
     margin-right:25px;
 }
@@ -1342,7 +1341,7 @@ h2 {
     margin-top:10px;
 }
 #header .links a:hover, #header .links a.active {
-    color:#ec1919
+    color:#A00000
 }
 #header .links li {
     float:left;
@@ -1356,7 +1355,7 @@ h2 {
 
     display: inline-block;
     padding: 0px 0px 0px 0px;
-    color:#535355;
+    color:#0A0A0C;
     text-decoration:none;
     text-transform:uppercase
 }
@@ -1391,10 +1390,10 @@ h2 {
     margin-right:9px;
 }
 .button-search:hover {
-    background:#ff0000;
+    background:#7A0000;
 }
 .button-search {
-    background: #535355;
+    background: #0A0A0C;
     width:80px;
     height:32px;
     float:right;
@@ -1438,7 +1437,7 @@ h2 {
     text-align: center;
 }
 .name a {
-    color:#ec1919;
+    color:#7A0000;
     text-decoration:none;
     line-height:normal;
     text-transform:uppercase;
@@ -1454,18 +1453,18 @@ h2 {
 .price {
     font-size:17px;
     line-height:normal;
-    color:#535355;
+    color:#0A0A0C;
     font-weight:bold;
     font-family: 'Cuprum', sans-serif;
 }
 
 .price .price-new {
     margin-right:10px;
-    color:#ec1919
+    color:#7A0000;
 }
 .price-old {
     font-weight:normal;
-    color:#535355;
+    color:#0A0A0C;
 }
 /*********************************************************************************************************************************************************************************/
 .icon-tools>div {
@@ -1596,7 +1595,7 @@ h2 {
     background:none;
 }
 #column-left .info li a:hover, #column-right .info li a:hover, .afine li a:hover, .acount li a:hover {
-    color:#ec1919;
+    color:#A00000;
 }
 /********************************************************************************************************************************************************************************/
 .box.account .box-heading, .box.info .box-heading {
@@ -1622,7 +1621,7 @@ h2 {
 }
 
 .breadcrumb a:hover {
-    color:#ec1919;
+    color:#A00000;
 }
 
 
@@ -1632,7 +1631,7 @@ h2 {
 }
 
 .breadcrumb > li:last-child a{
-    color: #EC1919;
+    color: #A00000;
 }
 
 .breadcrumb > li + li::before {
@@ -1669,12 +1668,12 @@ h2 {
     cursor: pointer;
 }
 .required {
-    color: #ff7409;
+    color: #A00000;
     font-weight: bold;
 }
 .error {
     display: block;
-    color: #FF0000;
+    color: #7A0000;
 }
 .help {
     color: #999;
@@ -1725,7 +1724,7 @@ table.list {
 }
 .checkout-product td.total {
     text-align:center!important;
-    color:#ec1919;
+    color:#A00000;
     font-weight:normal;
     font-size:15px;
     font-family: 'Cuprum', sans-serif;
@@ -1738,7 +1737,7 @@ table.list {
     padding:1px 5px 2px;
 }
 .checkout-content a.button:hover {
-    background:#535355
+    background:#0A0A0C
 }
 table.list td {
 
@@ -1819,7 +1818,7 @@ a.button {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
-    background: #ff0000;
+    background: #7A0000;
     font-size:15px;
     line-height:21px;
     position:relative;
@@ -1841,7 +1840,7 @@ a.button span {
     text-transform:uppercase;
 }
 .button strong {
-    background:#535355;
+    background:#0A0A0C;
     display: block;
     height: 0;
     left: 50%;
@@ -1907,7 +1906,7 @@ a.button span {
 }
 #module_cart .cart td .quantity {
     font-weight:bold;
-    color:#a6a4a4;
+    color:#737171;
 }
 #module_cart .cart td {
     border-bottom: 1px solid #EEEEEE;
@@ -1935,7 +1934,7 @@ a.button span {
     line-height: 14px;
 }
 #module_cart .cart td.quantity {
-    color: #A6A4A4;
+    color: #737171;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
     font-weight:bold;
@@ -1973,7 +1972,7 @@ a.button span {
 #module_cart table.total td b {
     font-size:11px;
     font-weight:bold;
-    color:#A6A4A4;
+    color:#737171;
 }
 #module_cart table.total td {
     color: #000;
@@ -2086,9 +2085,9 @@ a.button span {
     padding:0px 0 0;
 }
 
-.box .box-heading span {color:#ff0000}
+.box .box-heading span {color:#7A0000}
 .box .box-heading {
-    color:#535355;
+    color: #383737;
     font-size:21px;
     text-transform:uppercase;
     padding-bottom:16px;
@@ -2288,7 +2287,7 @@ a.button span {
     margin-top:0px
 }
 .box-product.box-subcat li img:hover {
-    border:3px solid #ff0000;
+    border:3px solid #7A0000;
 }
 .box-product.box-subcat li img {
     float:left;
@@ -2493,7 +2492,7 @@ a.button span {
     line-height:normal;
 }
 .content ul li a:hover {
-    color:#ec1919;
+    color:#A00000;
 }
 .content ul li:first-child {
     border:none;
@@ -2558,7 +2557,7 @@ ul {
     text-decoration:none
 }
 .box-category > ul > li.active>a, .box-category > ul > li>a:hover {
-    color:#ec1919;
+    color:#A00000;
 }
 .box-category > ul > li {
     position:relative;
@@ -2712,7 +2711,7 @@ ul {
     text-transform:capitalize;
 }
 .sitemap-info ul li a:hover {
-    color:#ec1919;
+    color:#A00000;
 }
 .sitemap-info ul {
 }
@@ -2742,7 +2741,7 @@ ul {
 .manuf-p a {
     text-decoration:none;
     font-weight:bold;
-    color:#ec1919;
+    color:#A00000;
 }
 .manuf-p a b {
     text-decoration:none;
@@ -2751,7 +2750,7 @@ ul {
 }
 .manuf-p a:hover b {
     font-weight:bold;
-    color:#ec1919;
+    color:#A00000;
 }
 .manufacturer-list {
     overflow: auto;
@@ -2787,7 +2786,7 @@ ul {
     padding-top: 4px;
 }
 .manufacturer-list ul li a:hover {
-    color:#ec1919;
+    color:#A00000;
 }
 .manufacturer-list ul li a {
     color: #35230F;
@@ -2870,7 +2869,7 @@ ul {
     float:left;
 }
 .product-filter .product-compare a:hover {
-    color:#ec1919
+    color:#A00000
 }
 .product-filter .product-compare a {
     text-decoration: none;
@@ -3211,7 +3210,7 @@ ul {
     text-decoration:none;
 }
 .product-info .description strong {
-    color:#A6A4A4;
+    color:#737171;
     font-weight:bold;
     font-size:12px;
     font-family:Arial, Helvetica, sans-serif
@@ -3220,13 +3219,13 @@ ul {
     font-weight:bold;
 }
 .product-info .description span.error {
-    color:#f00;
+    color:#7A0000;
 }
 .product-info .description a:hover {
-    color:#ec1919
+    color:#A00000
 }
 .product-info .description .button-prod:hover {
-    background:#535355;
+    background:#0A0A0C;
     text-decoration:none;
     color:#fff;
 }
@@ -3256,7 +3255,7 @@ ul {
 }
 .product-info .price-old {
     text-decoration: line-through;
-    color:#A6A4A4;
+    color:#737171;
     font-size:18px;
 }
 .product-info h1 {
@@ -3269,7 +3268,7 @@ ul {
 }
 
 .product-info .description .button-prod {
-    background: none repeat scroll 0 0 #ff0000;
+    background: none repeat scroll 0 0 #7A0000;
     color: #FFFFFF;
     float: left;
     font-family: 'Cuprum', sans-serif;
@@ -3400,7 +3399,7 @@ ul {
 .btn-rew a {
     text-decoration:underline;
     font-size:12px;
-    color:#A6A4A4;
+    color:#737171;
     font-weight:normal;
 }
 .btn-rew a:hover {
@@ -3438,7 +3437,7 @@ ul {
 }
 .attribute td {
     padding: 7px 12px 7px 12px;
-    color: #ec1919;
+    color: #A00000;
     text-align:left;
     vertical-align: top;
 }
@@ -3563,7 +3562,7 @@ ul {
 .compare-info td.td-price {
     font-family: 'Cuprum', sans-serif;
     font-weight:normal;
-    color:#ff0000
+    color:#7A0000
 }
 .compare-info td {
     padding: 7px;
@@ -3690,7 +3689,7 @@ ul {
     text-align: right;
 }
 .wishlist-product tbody .price s {
-    color: #a6a4a4;
+    color: #737171;
     display:block;
     font-weight:normal;
 }
@@ -3717,7 +3716,7 @@ ul {
     line-height:17px;
 }
 .login-content .left h2 {
-    color:#ec1919;
+    color:#A00000;
     margin-bottom:3px;
 }
 .login-content .right h2 {
@@ -3750,7 +3749,7 @@ ul {
 }
 .link-login {
     font-size:12px;
-    color:#ec1919;
+    color:#A00000;
     text-decoration:underline;
     padding-top:1px;
     margin-bottom:15px;
@@ -3798,7 +3797,7 @@ ul {
     border-bottom: 1px solid #E4E4E4;
 }
 .order-list .order-id span, .order-list .order-status span, .order-list .order-content div .or-price, .return-list .return-id span, .return-list .return-status span, .return-list .return-content div .or-price {
-    color:#ec1919
+    color:#A00000
 }
 .order-list .order-id, .return-list .return-id {
     width: 49%;
@@ -3947,7 +3946,7 @@ a.button-order-right {
     padding:0;
 }
 a.button-return-left:hover span, a.button-return-right:hover span, a.button-order-right:hover span, a.button-cont-right:hover span, a.button-back-left:hover span, .wishlist-product a.button-wislish-left:hover span, a.button-inf-left:hover span {
-    color:#ec1919;
+    color:#A00000;
 }
 a.button-return-left span, a.button-return-right span, a.button-order-right span, a.button-cont-right span, a.button-back-left span, .wishlist-product a.button-wislish-left span, a.button-inf-left span {
     color: #35230f;
@@ -4133,7 +4132,7 @@ a {
 }
 tbody .total {
     font-weight:bold;
-    color:#ec1919;
+    color:#A00000;
 }
 #shipping select {
     width:258px;
@@ -4145,7 +4144,7 @@ tbody .total {
     margin-bottom:10px;
 }
 .cart-info tbody span.stock {
-    color: #F00;
+    color: #7A0000;
     font-weight: bold;
 }
 .cart-module .cart-heading {
@@ -4197,7 +4196,7 @@ tbody .total {
 }
 #coupon {
     font-weight:bold;
-    color:#ec1919;
+    color:#A00000;
     font-size:11px;
 }
 #coupon a {
@@ -4215,7 +4214,7 @@ tbody .total {
 }
 #voucher {
     font-weight:bold;
-    color:#ec1919;
+    color:#A00000;
     font-size:11px;
 }
 #voucher input {
@@ -4307,14 +4306,14 @@ tbody .total {
 }
 
 .checkout-content.opt .left h2 {
-    color:#ec1919;
+    color:#A00000;
     padding-bottom:0px;
 }
 .checkout-content.opt .right h2 {
     padding-bottom:0;
 }
 .checkout-content.opt .right a {
-    color:#ec1919;
+    color:#A00000;
 }
 .checkout-content.opt .left {
 
@@ -4354,7 +4353,7 @@ tbody .total {
 
 }
 .cart-total td.cart-total1.last {
-    color:#ec1919;
+    color:#A00000;
 }
 .cart-total td.last {
     border-bottom:none;
@@ -4610,7 +4609,6 @@ tbody .total {
     border-top:1px solid #e0e0e0;
 }
 #footer h3 {
-    color:#535355;
     font-weight:bold;
     font-size:17px;
     margin:25px 0 20px;
@@ -4619,7 +4617,7 @@ tbody .total {
 }
 #footer .column {}
 #footer .column li a {display:inline-block; position:relative; overflow:hidden;}
-#footer .column li em {display:block; height:1px; bottom:0; width:0px; position:absolute; left:50%; background:#ff0000;}
+#footer .column li em {display:block; height:1px; bottom:0; width:0px; position:absolute; left:50%; background:#7A0000;}
 #footer .column {
     float: left;
     width:241px;
@@ -4637,11 +4635,11 @@ tbody .total {
 }
 #footer .column a {
     text-decoration: none;
-    color:#7d7c7c;
+    color:#3E3E40;
     line-height:21px;
 }
 #footer .column a:hover {
-    color:#ec1919;
+    color:#A00000;
 }
 #footer .column.col-4 {
     margin-right:0;
@@ -4659,7 +4657,6 @@ tbody .total {
 }
 #powered a {
     text-decoration:none;
-    color:#ff0000;
     font-size:12px;
 }
 #powered a:hover {
@@ -4667,7 +4664,6 @@ tbody .total {
 }
 #powered {
     font-size:12px;
-    color:#ff0000;
     text-align:left;
     padding:20px;
     background:url(../image/footer.png) repeat-x left top
@@ -4842,7 +4838,7 @@ li.related-info:first-child {margin-left:0px}
 
 }
 .related .jcarousel-prev:hover {
-    background:url(../image/related-pagg-prev.png) -18px 50% no-repeat #ec1919;
+    background:url(../image/related-pagg-prev.png) -18px 50% no-repeat #A00000;
 }
 .related .jcarousel-next {
     display:block;
@@ -4856,7 +4852,7 @@ li.related-info:first-child {margin-left:0px}
 
 }
 .related .jcarousel-next:hover {
-    background:url(../image/related-pagg-next.png) no-repeat 18px 50% #ec1919;
+    background:url(../image/related-pagg-next.png) no-repeat 18px 50% #A00000;
 }
 
 /******************************************************************************************************************************************/
@@ -4876,7 +4872,7 @@ li.related-info:first-child {margin-left:0px}
     z-index: 1;
 }
 #content .shop-cart-content > p {
-    color:#ec1919;
+    color:#A00000;
     font-weight:bold;
 }
 .checkout-cart h2 {
@@ -5058,7 +5054,7 @@ li.related-info:first-child {margin-left:0px}
 }
 
 .alert-success button.close:hover{
-    color: #ec1919;
+    color: #A00000;
 }
 
 @media (min-width: 1200px) {
@@ -5138,7 +5134,7 @@ a.list-group-item{
 a.list-group-item{
     border: 0px;
     border-top: 1px solid #E3E3E3;
-    color: #7D7C7C;
+    color: #000000;
     text-decoration: none;
     background: url("../image/marker-2.png") no-repeat center left 5px rgba(0, 0, 0, 0);
     padding-left: 15px;
@@ -5154,7 +5150,7 @@ a.list-group-item{
 }
 
 a.list-group-item:hover{
-    color: #EC1919;
+    color: #A00000;
     border: 0px;
     border-top: 1px solid #E3E3E3;
     background: url("../image/marker-2.png") no-repeat center left 5px rgba(0, 0, 0, 0);
@@ -5188,12 +5184,12 @@ a.list-group-item:hover{
 
 .list-unstyled a{
     padding-left: 15px;
-    color: #7D7C7C;
+    color: #000000;
     text-decoration: none;
 }
 
 .list-unstyled a:hover{
-    color: #EC1919;
+    color: #A00000;
 }
 
 .btn-group {
@@ -5254,7 +5250,7 @@ a.list-group-item:hover{
 
 
 #search .btn{
-    background: #535355;
+    background: #0A0A0C;
     width: 80px;
     height: 32px;
     float: right;
@@ -5278,7 +5274,7 @@ a.list-group-item:hover{
 }
 
 #search .btn:hover{
-    background: #FF0000;
+    background: #7A0000;
 }
 
 .breadcrumb{
@@ -5298,7 +5294,7 @@ a.list-group-item:hover{
 /*******Category page *********************************/
 #content.category h2{
     font-size: 20px;
-    color: #535355;
+    color: #0A0A0C;
     text-transform: uppercase;
     font-weight: bold;
 }
@@ -5390,7 +5386,7 @@ a.list-group-item:hover{
 .caption h4 a{
     font-family: 'Cuprum';
 
-    color: #ec1919;
+    color: #A00000;
     line-height: normal;
     text-transform: uppercase;
     font-size: 16px;
