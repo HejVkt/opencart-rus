@@ -4659,7 +4659,6 @@ tbody .total {
 }
 #powered a {
     text-decoration:none;
-    color:#ff0000;
     font-size:12px;
 }
 #powered a:hover {
@@ -4667,7 +4666,6 @@ tbody .total {
 }
 #powered {
     font-size:12px;
-    color:#ff0000;
     text-align:left;
     padding:20px;
     background:url(../image/footer.png) repeat-x left top
