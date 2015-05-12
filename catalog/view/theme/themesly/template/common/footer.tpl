@@ -46,15 +46,11 @@
 
     </div>
     <div class="wrapper">
-        <div id="powered"><?php echo $powered; ?></div>
+        <div id="powered">Все права защищены. Копирование материалов без разрешения правообладателя запрещено. Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями ч. 2 ст. 437 Гражданского кодекса РФ. Вся предоставленная информация может быть изменена без предварительного уведомления. Уточняйте информацию у менеджеров.
+			<div style="text-align: right;"><?php echo $_SERVER['SERVER_NAME']; ?> <?php echo date('Y'); ?></div></div>
     </div>
 </div>
 </footer>
-
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
 
 <!-- end of body div -->
     </div>

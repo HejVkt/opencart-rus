@@ -95,7 +95,7 @@
                         <?php if ($logged) { ?>
                             <?php echo $text_logged; ?>
                         <?php } else { ?>
-                            Приветствуем посетитель, Вы можете  <a style="color: rgb(255, 0, 0);" href="<?php echo $login; ?>">Войти</a> или <a style="color: rgb(255, 0, 0);" href="<?php echo $register; ?>">Зарегистрироваться</a>
+                            Приветствуем посетитель, Вы можете  <a href="<?php echo $login; ?>">Войти</a> или <a href="<?php echo $register; ?>">Зарегистрироваться</a>
                         <?php } ?>
 
                     </div>
