@@ -5245,7 +5245,7 @@ a.list-group-item:hover{
     font-size: 15px;
 }
 
-.fa-shopping-cart:before{
+.btn-group .fa-shopping-cart:before{
     content: 'Корзина: ';
     font-family: 'Cuprum';
     font-weight: bold;
