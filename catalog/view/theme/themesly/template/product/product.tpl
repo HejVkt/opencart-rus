@@ -78,7 +78,7 @@
             <?php $class = 'col-xs-5'; ?>
             <?php } ?>
 
-            <div class="" style="padding-right: 0px;margin-left:330px;">
+            <div class="" style="padding-right: 0px;margin-left:330px;" id="product">
 
                 <h1><?php echo $heading_title; ?></h1>
 
@@ -191,7 +191,7 @@
 
                 </div>
 
-              <div id="product">
+              <div>
                 <?php if ($options) { ?>
                 <hr>
                 <h3><?php echo $text_option; ?></h3>
@@ -560,7 +560,7 @@ $('#button-cart').on('click', function() {
 
 				$('html, body').animate({ scrollTop: 0 }, 'slow');
 
-				$('#cart > ul').load('index.php?route=common/cart/info ul li');
+                $('#cart_content').load('index.php?route=common/cart/info #span_cart_content');
 			}
 		}
 	});
