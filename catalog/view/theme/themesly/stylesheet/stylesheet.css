@@ -414,12 +414,21 @@ div.required .control-label:before {
 
 .btn-primary:visited {
     color: #ffffff;
+
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-image-width: 0px;
 }
 
 .btn-default:hover, .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled], .btn-primary[disabled].active, .btn-primary.disabled.active {
     background-color: #535355;
-    border-color: #535355;
     color: white;
+
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-image-width: 0px;
 }
 
 .btn-primary:hover,
@@ -428,7 +437,11 @@ div.required .control-label:before {
 .btn-primary:active,
 .btn-primary.active{
     background-color: #535355;
-    border-color: #535355;
+
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-image-width: 0px;
 }
 
 .btn-warning {
@@ -438,6 +451,11 @@ div.required .control-label:before {
 	background-image: linear-gradient(to bottom, #fbb450, #f89406);
 	background-repeat: repeat-x;
 	border-color: #f89406 #f89406 #ad6704;
+
+    border: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-image-width: 0px;
 }
 .btn-warning:hover, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled] {
 	box-shadow: inset 0 1000px 0 rgba(0, 0, 0, 0.1);
