@@ -5436,3 +5436,8 @@ a.list-group-item:hover{
 .product-info .input-group{
     width: 60px;
 }
+
+
+textarea.form-control{
+    max-width: 730px;
+}
